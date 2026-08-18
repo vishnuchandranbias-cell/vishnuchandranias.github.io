@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vishnu Chandran, IAS 2015 — public administration, policy, cities, skills, data and reflections from the field.">
+<title>Vishnu Chandran — Public Service, Policy & Reflections</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+:root{
+ --navy:#101820;--navy2:#17222c;--cream:#f7f5f0;--paper:#fff;
+ --ink:#182027;--muted:#697178;--line:#dfe2df;--gold:#b68a4a;
+ --max:1180px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.container{max-width:var(--max);margin:auto;padding:0 28px}
+.nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(16,24,32,.95);border-bottom:1px solid rgba(255,255,255,.1)}
+.navin{height:72px;max-width:var(--max);margin:auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:"Playfair Display",serif;color:#fff;font-size:1.25rem}.brand small{font:10px "DM Mono";letter-spacing:.18em;color:#aeb5b8;margin-left:8px}
+.links{display:flex;gap:28px;color:#bfc6c9;font-size:.78rem}.links a:hover{color:white}
+.hero{background:var(--navy);color:white;padding:170px 0 110px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(182,138,74,.25);border-radius:50%;right:-170px;top:80px}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:80px;align-items:end;position:relative;z-index:1}
+.label,.kicker{font:11px "DM Mono";letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font:500 clamp(4rem,8vw,7.2rem)/.92 "Playfair Display",serif;letter-spacing:-.045em;margin:20px 0 28px}
+.hero h1 span{color:#c7a269}
+.hero p{max-width:650px;color:#c3c9cb;font-size:1.13rem}
+.profile{border-left:1px solid rgba(255,255,255,.2);padding-left:30px}
+.profile strong{font-family:"Playfair Display";font-size:1.5rem;font-weight:500}
+.profile p{font-size:.88rem;color:#9da6aa;margin:12px 0 24px}
+.profile dl{display:grid;grid-template-columns:1fr 1fr;gap:18px 25px;margin:0}
+.profile dt{font:10px "DM Mono";color:#7f898e;text-transform:uppercase}
+.profile dd{margin:3px 0 0;color:white;font-size:.84rem}
+
+section{padding:105px 0}.intro{background:var(--paper)}
+.section-title{display:grid;grid-template-columns:1fr .75fr;gap:60px;margin-bottom:50px}
+h2{font:500 clamp(2.6rem,5vw,4.7rem)/1 "Playfair Display";letter-spacing:-.04em;margin:8px 0}
+.lead{color:var(--muted);max-width:430px}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+.pull{font:500 2rem/1.25 "Playfair Display";border-top:2px solid var(--gold);padding-top:20px}
+.copy{font-size:1.03rem;color:#41494e}.copy p{margin-top:0;margin-bottom:20px}
+
+.territories{background:var(--navy);color:#fff}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#39434a}
+.card{background:var(--navy);padding:28px;min-height:270px;transition:.25s}.card:hover{background:var(--navy2)}
+.card b{font:10px "DM Mono";color:var(--gold);letter-spacing:.12em}.card h3{font:500 1.7rem/1.08 "Playfair Display";margin:55px 0 12px}.card p{font-size:.87rem;color:#9fa8ac}
+
+.notes{background:var(--cream)}
+.notes-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:20px}
+.feature{min-height:510px;background:var(--navy);color:#fff;padding:42px;display:flex;align-items:end;position:relative;overflow:hidden}
+.feature:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(182,138,74,.3),transparent 30%)}
+.feature div{position:relative}.feature h3{font:500 clamp(2.5rem,5vw,4.6rem)/.98 "Playfair Display";margin:12px 0}.feature p{color:#b8c0c3;max-width:560px}
+.side{display:grid;gap:20px}.side article{background:#fff;border:1px solid var(--line);padding:30px;min-height:245px}.side h3{font:500 2rem/1.05 "Playfair Display";margin:18px 0 8px}.side p{color:var(--muted);font-size:.88rem}
+.tag{font:10px "DM Mono";letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+
+.timeline-section{background:#fff}.timeline{border-top:1px solid var(--line)}
+.t{display:grid;grid-template-columns:140px 1fr 1fr;gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}
+.t .date{font:11px "DM Mono";color:var(--gold)}.t h3{font:500 1.35rem "Playfair Display";margin:0}.t p{margin:0;color:var(--muted);font-size:.9rem}
+
+.research{background:var(--navy);color:#fff}.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.research-card{border:1px solid #39434a;padding:28px;min-height:250px}.research-card h3{font:500 1.65rem "Playfair Display";margin:45px 0 10px}.research-card p{color:#9fa8ac;font-size:.88rem}
+
+.now{background:#e8e1d4}.now-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:rgba(255,255,255,.62);border:1px solid #d5cec2;padding:30px}.panel h3{font:500 2rem "Playfair Display";margin:0 0 15px}.panel ul{list-style:none;padding:0;margin:0}.panel li{display:flex;justify-content:space-between;border-bottom:1px solid #d5cec2;padding:12px 0;font-size:.9rem}.panel li:last-child{border:0}.panel li span:last-child{font:10px "DM Mono";color:#8a7a61}
+
+.source{background:#f5f3ee}.sources{display:grid;grid-template-columns:1fr 1fr;gap:12px}.source a{display:block;background:#fff;border:1px solid var(--line);padding:18px;font-size:.86rem}.source a:hover{border-color:#b8a27f}.source small{display:block;color:var(--gold);font:10px "DM Mono";margin-bottom:5px}
+
+.contact{background:var(--navy);color:#fff;text-align:center}.contact h2{max-width:800px;margin:10px auto 18px}.contact p{max-width:570px;margin:0 auto 28px;color:#aab2b5}.button{display:inline-block;border:1px solid rgba(255,255,255,.25);padding:12px 20px;border-radius:2px;font-size:.8rem;margin:4px}.button.gold{background:var(--gold);border-color:var(--gold);color:#101820}
+footer{background:#0b1116;color:#727c81;padding:22px 0;font:10px "DM Mono"}footer .container{display:flex;justify-content:space-between}
+
+@media(max-width:850px){
+ .links{display:none}.hero-grid,.about-grid,.section-title,.notes-grid,.now-grid{grid-template-columns:1fr}.hero{padding-top:135px}.profile{border-left:0;border-top:1px solid #39434a;padding:25px 0 0}.cards{grid-template-columns:1fr 1fr}.research-grid{grid-template-columns:1fr}.t{grid-template-columns:90px 1fr}.t p{grid-column:2}.sources{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ .container{padding:0 20px}.hero h1{font-size:4rem}.cards{grid-template-columns:1fr}.t{grid-template-columns:1fr}.t p{grid-column:auto}.profile dl{grid-template-columns:1fr 1fr}section{padding:75px 0}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="navin">
+<a class="brand" href="#">Vishnu Chandran <small>IAS · 2015</small></a>
+<div class="links"><a href="#about">About</a><a href="#writing">Writing</a><a href="#journey">Journey</a><a href="#research">Research</a><a href="#now">Now</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header class="hero">
+<div class="container hero-grid">
+<div>
+<div class="label">Public service · Policy · Reflection</div>
+<h1>Seeing the<br><span>system</span><br>from within.</h1>
+<p>A personal archive of observations, ideas and questions from a decade in public administration — and from the spaces beyond the office.</p>
+</div>
+<div class="profile">
+<strong>Vishnu Chandran</strong>
+<p>Indian Administrative Service · Tamil Nadu cadre · 2015 batch</p>
+<dl>
+<dt>Background<dd>Engineer · Public Administrator</dd>
+<dt>Focus<dd>Governance · Policy · Skills</dd>
+<dt>Research<dd>India · Japan · Local Government</dd>
+<dt>Current phase<dd>Public Policy · Tokyo</dd>
+</dl>
+</div>
+</div>
+</header>
+
+<section class="intro" id="about"><div class="container">
+<div class="section-title"><div><div class="kicker">01 · About</div><h2>A career that keeps changing the question.</h2></div><p class="lead">I am less interested in collecting titles than in understanding what each place teaches us about institutions, people and public systems.</p></div>
+<div class="about-grid"><div class="pull">“The interesting part of administration begins where the policy document ends.”</div>
+<div class="copy"><p>My professional journey began in technology and moved into the Indian Administrative Service. Since then, I have worked across district administration, urban governance, public administration, water, employment and vocational training.</p><p>Each assignment has exposed a different version of the same problem: how do institutions translate intent into outcomes?</p><p>This website is an attempt to document that learning — through essays, field observations, research, photographs, travel and conversations. Some pieces will be analytical. Some will be personal. Some may simply be questions I am not yet able to answer.</p></div></div>
+</div></section>
+
+<section class="territories"><div class="container">
+<div class="section-title"><div><div class="kicker">02 · What I write about</div><h2>Four recurring questions.</h2></div><p class="lead" style="color:#9fa8ac">The categories are deliberately broad. The connections between them are where the interesting work happens.</p></div>
+<div class="cards">
+<article class="card"><b>01 · GOVERNANCE</b><h3>How do institutions actually work?</h3><p>Implementation, local government, accountability, incentives and the distance between policy design and delivery.</p></article>
+<article class="card"><b>02 · PEOPLE</b><h3>Who experiences the system?</h3><p>Education, skills, employment, livelihoods and the everyday consequences of administrative choices.</p></article>
+<article class="card"><b>03 · EVIDENCE</b><h3>What can data tell us?</h3><p>Economics, econometrics, technology and the disciplined use of evidence in public decision-making.</p></article>
+<article class="card"><b>04 · REFLECTION</b><h3>What does the work do to us?</h3><p>Books, travel, spirituality, attention and the inner life of someone working in public institutions.</p></article>
+</div></div></section>
+
+<section class="notes" id="writing"><div class="container">
+<div class="section-title"><div><div class="kicker">03 · Writing</div><h2>Notes from the field.</h2></div><p class="lead">Long-form essays will sit alongside shorter observations — written slowly enough to be useful.</p></div>
+<div class="notes-grid">
+<article class="feature"><div><div class="tag">Featured essay</div><h3>When policy meets the last mile.</h3><p>What years of field administration taught me about the difference between designing a programme and making it work.</p><a class="button gold" href="#">Read essay →</a></div></article>
+<div class="side">
+<article><div class="tag">India · Japan</div><h3>Looking at Indian cities from Tokyo.</h3><p>Comparative notes on local government, public space, infrastructure and institutional culture.</p><a href="#">Coming soon →</a></article>
+<article><div class="tag">Skills</div><h3>The question after the ITI.</h3><p>Training is only one part of the employability story. What happens between certification and a meaningful job?</p><a href="#">Coming soon →</a></article>
+</div></div>
+</div></section>
+
+<section class="timeline-section" id="journey"><div class="container">
+<div class="section-title"><div><div class="kicker">04 · Journey</div><h2>A decade in public service.</h2></div><p class="lead">A concise professional chronology. Detailed stories belong in the writing archive.</p></div>
+<div class="timeline">
+<div class="t"><div class="date">2011–12</div><h3>Tata Elxsi</h3><p>Software engineering — the beginning of a journey that would eventually move from technology into public administration.</p></div>
+<div class="t"><div class="date">2015</div><h3>Indian Administrative Service</h3><p>Joined the IAS, Tamil Nadu cadre, 2015 batch.</p></div>
+<div class="t"><div class="date">2015–21</div><h3>Field & district administration</h3><p>Assistant Collector, Sub Collector and Additional District Magistrate responsibilities, including Paramakudi and Thoothukudi.</p></div>
+<div class="t"><div class="date">2021–24</div><h3>Urban governance · water · Secretariat</h3><p>Municipal administration, water-sector responsibilities and senior state-government assignments.</p></div>
+<div class="t"><div class="date">2023–24</div><h3>District Collector · Ramanathapuram</h3><p>A particularly formative period in a coastal district shaped by water, livelihoods, agriculture and disaster vulnerability.</p></div>
+<div class="t"><div class="date">2024–25</div><h3>Employment & Training · Tamil Nadu</h3><p>Director, Employment and Training — working on ITIs, apprenticeships, industry partnerships and vocational skills.</p></div>
+<div class="t"><div class="date">2025–26</div><h3>Public policy · Tokyo</h3><p>Graduate study at GRIPS, Japan, with a growing interest in comparative governance and the India–Japan experience.</p></div>
+</div></div></section>
+
+<section class="research" id="research"><div class="container">
+<div class="section-title"><div><div class="kicker">05 · Research</div><h2>Questions I want to test.</h2></div><p class="lead" style="color:#9fa8ac">The research section is where administrative experience meets economics and evidence.</p></div>
+<div class="research-grid">
+<article class="research-card"><div class="tag">01 · Cities</div><h3>Smart cities: intent versus effectiveness.</h3><p>A comparative study of policy intent, institutional design, spending and implementation in India and Japan.</p></article>
+<article class="research-card"><div class="tag">02 · Skills</div><h3>Does vocational training lead to employment?</h3><p>Understanding student and institutional factors associated with employment outcomes in Tamil Nadu ITIs.</p></article>
+<article class="research-card"><div class="tag">03 · Institutions</div><h3>When administrative data becomes evidence.</h3><p>Selection, measurement, incentives and the methodological problems hidden inside apparently simple government datasets.</p></article>
+</div></div></section>
+
+<section class="now" id="now"><div class="container">
+<div class="section-title"><div><div class="kicker">06 · Now</div><h2>What I am thinking about.</h2></div><p class="lead">This page should change regularly. It is the most immediate window into the person behind the résumé.</p></div>
+<div class="now-grid">
+<div class="panel"><h3>In Tokyo</h3><p>Studying public policy while paying attention to Japan's cities, local institutions, public spaces, transport, ageing society and disaster preparedness.</p><ul><li><span>Public policy</span><span>GRIPS</span></li><li><span>India ↔ Japan</span><span>comparison</span></li><li><span>Local government</span><span>field notes</span></li></ul></div>
+<div class="panel"><h3>On my desk</h3><ul><li><span>Economics & econometrics</span><span>learning</span></li><li><span>AI & governance</span><span>exploring</span></li><li><span>Skills & employment</span><span>research</span></li><li><span>Travel journals</span><span>writing</span></li><li><span>Books & philosophy</span><span>reading</span></li></ul></div>
+</div></div></section>
+
+<section class="source"><div class="container">
+<div class="section-title"><div><div class="kicker">07 · Public record</div><h2>Selected sources.</h2></div><p class="lead">The biography should be evidence-based. These are starting points for verification, not substitutes for official records.</p></div>
+<div class="sources">
+<a href="https://jp.linkedin.com/in/vishnu-chandran-88518b50" target="_blank"><small>PROFESSIONAL PROFILE</small>LinkedIn · Vishnu Chandran, IAS 2015</a>
+<a href="https://tnsectdemo.tn.gov.in/ias/currentpostings.php" target="_blank"><small>GOVERNMENT</small>Tamil Nadu IAS directory</a>
+<a href="https://www.hcltech.com/press-releases/hclfoundation-signs-mous-government-tamil-nadu-boost-entrepreneurship-and-vocational" target="_blank"><small>SKILLS</small>HCLTech · Tamil Nadu vocational education initiative</a>
+<a href="https://sdgknowledgehub.undp.org.in/wp-content/uploads/2025/04/Report-on-Round-Table-on-Enhancing-Apprenticeship-engagement.pdf" target="_blank"><small>APPRENTICESHIP</small>UNDP · Tamil Nadu apprenticeship roundtable</a>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="container">
+<div class="kicker">08 · Contact</div><h2>Ideas are better when they are challenged.</h2><p>If something here makes you disagree, think further or start a conversation, write to me.</p>
+<a class="button gold" href="mailto:YOUR-EMAIL@example.com">Get in touch →</a>
+<a class="button" href="https://www.linkedin.com/in/vishnu-chandran-88518b50" target="_blank">LinkedIn</a>
+<p style="font-size:.72rem;margin-top:35px">Views expressed are personal and do not represent the views of the Government of India or the Government of Tamil Nadu.</p>
+</div></section>
+<footer><div class="container"><span>© 2026 Vishnu Chandran</span><span>Public Service · Policy · Reflection</span></div></footer>
+</body>
+</html>
