@@ -9,8 +9,8 @@
 
 <title>Two Hands, One Tray - Zero Touch !!</title>
 
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
@@ -19,64 +19,47 @@
 <style>
 
 /* =========================================================
-   BASIC PAGE
+   GLOBAL
 ========================================================= */
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-
     margin: 0;
-
     background: #faf9f6;
-
     color: #303230;
-
     font-family: "DM Sans", sans-serif;
-
-    font-size: 18px;
-
-    line-height: 1.9;
-
     -webkit-font-smoothing: antialiased;
-
+    text-rendering: optimizeLegibility;
 }
 
 
 /* =========================================================
-   TOP NAVIGATION
+   TOP / BACK
 ========================================================= */
 
 .top {
-
+    width: 100%;
     max-width: 760px;
-
     margin: 0 auto;
-
-    padding: 35px 25px 0;
-
+    padding: 32px 0 0;
 }
 
 .back {
-
-    font-family: "DM Sans", sans-serif;
-
-    font-size: 12px;
-
     color: #888b88;
-
     text-decoration: none;
-
+    font-size: 12px;
     letter-spacing: 0.04em;
-
 }
 
 .back:hover {
-
     color: #b96538;
-
 }
 
 
@@ -85,162 +68,125 @@ body {
 ========================================================= */
 
 .article-header {
-
-    max-width: 900px;
-
-    margin: 95px auto 70px;
-
-    padding: 0 30px;
-
+    width: 100%;
+    max-width: 760px;
+    margin: 105px auto 65px;
 }
 
 .label {
+    margin-bottom: 24px;
 
     font-family: "DM Sans", sans-serif;
-
     font-size: 11px;
-
+    font-weight: 500;
     letter-spacing: 0.16em;
-
     text-transform: uppercase;
 
     color: #b96538;
-
-    margin-bottom: 25px;
-
 }
 
 h1 {
-
     margin: 0;
 
     font-family: "Playfair Display", Georgia, serif;
-
+    font-size: clamp(3.2rem, 7vw, 5.7rem);
     font-weight: 500;
-
-    font-size: clamp(3.2rem, 7vw, 6rem);
-
-    line-height: 1.04;
-
+    line-height: 1.06;
     letter-spacing: -0.045em;
 
     color: #292b2a;
-
 }
 
 
 /* =========================================================
    IMAGE
+   EXACTLY SAME WIDTH AS ARTICLE
 ========================================================= */
 
 .article-image {
-
-    max-width: 1050px;
-
+    width: 100%;
+    max-width: 760px;
     margin: 0 auto;
-
-    padding: 0 30px;
-
 }
 
 .article-image img {
-
-    width: 100%;
-
-    height: auto;
-
     display: block;
 
+    width: 100%;
+    height: auto;
+
+    margin: 0;
 }
 
 
 /* =========================================================
-   ARTICLE TEXT
+   ARTICLE
 ========================================================= */
 
 .article {
+    width: 100%;
+    max-width: 760px;
 
-    max-width: 680px;
-
-    margin: 85px auto 120px;
-
-    padding: 0 25px;
-
+    margin: 78px auto 110px;
 }
 
-.article p {
 
-    margin: 0 auto 34px;
+/* =========================================================
+   ALL ARTICLE TEXT
+   ONE FONT / ONE SIZE / ONE LINE HEIGHT
+========================================================= */
+
+.article p {
+    margin: 0 0 34px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.9;
+    letter-spacing: 0;
+
+    color: #303230;
 
     text-align: left;
-
-    font-size: 18px;
-
-    line-height: 1.95;
-
-    letter-spacing: 0.005em;
-
 }
 
 
 /* =========================================================
    OPENING
+   SAME FONT AS REST OF ARTICLE
 ========================================================= */
 
 .opening {
-
-    margin-bottom: 55px;
-
+    margin-bottom: 50px;
 }
 
 .opening p {
+    margin: 0 0 10px;
 
-    margin-bottom: 10px;
-
-}
-
-.opening p:first-child {
-
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: 22px;
-
-    margin-bottom: 25px;
-
-}
-
-.opening p:last-child {
-
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-style: italic;
-
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.9;
 }
 
 
 /* =========================================================
-   NUMBERED POINTS
+   NUMBERED OBSERVATIONS
 ========================================================= */
 
 .observation {
-
-    margin-bottom: 15px !important;
-
+    margin-bottom: 14px !important;
 }
 
 
 /* =========================================================
    FINAL PARAGRAPH
+   NO SEPARATION LINE
 ========================================================= */
 
 .final {
-
-    margin-top: 50px !important;
-
-    padding-top: 40px;
-
-    border-top: 1px solid #deddd8;
-
+    margin-top: 42px !important;
+    padding-top: 0 !important;
+    border-top: none !important;
 }
 
 
@@ -249,19 +195,19 @@ h1 {
 ========================================================= */
 
 footer {
+    width: 100%;
 
     border-top: 1px solid #deddd8;
 
     text-align: center;
 
-    padding: 35px 20px;
+    padding: 32px 20px 40px;
 
     color: #999;
 
+    font-family: "DM Sans", sans-serif;
     font-size: 11px;
-
     letter-spacing: 0.03em;
-
 }
 
 
@@ -269,62 +215,71 @@ footer {
    MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
-
-    body {
-
-        font-size: 17px;
-
-        line-height: 1.85;
-
-    }
-
+@media (max-width: 820px) {
 
     .top {
-
-        padding: 25px 20px 0;
-
+        padding: 25px 22px 0;
     }
-
 
     .article-header {
-
-        margin: 70px auto 55px;
-
-        padding: 0 20px;
-
+        padding: 0 22px;
+        margin: 75px auto 55px;
     }
-
-
-    h1 {
-
-        font-size: 3.25rem;
-
-    }
-
 
     .article-image {
-
-        padding: 0 12px;
-
+        padding: 0 16px;
     }
-
 
     .article {
-
-        margin: 65px auto 90px;
-
         padding: 0 22px;
-
+        margin: 65px auto 85px;
     }
 
-
-    .article p {
-
+    .article p,
+    .opening p {
         font-size: 17px;
-
         line-height: 1.85;
+    }
 
+    h1 {
+        font-size: clamp(3rem, 12vw, 4.5rem);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .top {
+        padding: 22px 18px 0;
+    }
+
+    .article-header {
+        padding: 0 18px;
+        margin: 65px auto 48px;
+    }
+
+    .article-image {
+        padding: 0 10px;
+    }
+
+    .article {
+        padding: 0 18px;
+        margin: 55px auto 75px;
+    }
+
+    .article p,
+    .opening p {
+        font-size: 16.5px;
+        line-height: 1.85;
+    }
+
+    h1 {
+        font-size: 3rem;
     }
 
 }
@@ -344,9 +299,7 @@ footer {
 <div class="top">
 
     <a href="../index.html" class="back">
-
         ← Back
-
     </a>
 
 </div>
@@ -360,16 +313,11 @@ footer {
 <header class="article-header">
 
     <div class="label">
-
         FIELD NOTE · TOKYO
-
     </div>
 
-
     <h1>
-
         Two Hands, One Tray - Zero Touch !!
-
     </h1>
 
 </header>
@@ -383,12 +331,8 @@ footer {
 <div class="article-image">
 
     <img
-
-   
-       src="../two-hands-one-tray.jpeg"
-
+        src="../two-hands-one-tray.jpeg"
         alt="Two Hands, One Tray - Zero Touch !!"
-
     >
 
 </div>
@@ -405,30 +349,19 @@ footer {
     <div class="opening">
 
         <p>
-
             Day 1, a Konbini in Tokyo
-
         </p>
 
-
         <p>
-
             Me :( Handing over the cash in a folded Indian style)
-
         </p>
 
-
         <p>
-
             Cashier :(Gently extending the small rectangular tray and smiling)
-
         </p>
 
-
         <p>
-
             Me : (Thinking.. hand which has cleared over a thousand deals , now has become radioactive..!)
-
         </p>
 
     </div>
@@ -436,73 +369,55 @@ footer {
 
 
     <p>
-
         That tray — the karuton — sits in every store, every counter like a referee. The blue tray with tiny bristles inside won’t let even your ¥1 coin roll away. You drop your money in the tray, and presumably it forms no opinions about you.
-
     </p>
 
 
 
     <p>
-
         Nobody quite knows when and why such a custom started. I searched the GPTs. No founding documents that clearly tell how this has become a habit across Japan.  Some say it traces back to pre-Meiji Japan, when a class of merchants and leatherworkers were treated as untouchables. But for today’s Japan, this could never make any sense. Even the rich - poor, forward- backward has to use the tray. It is now a statement of politeness rather than a class custom. What I can understand, as two main reasons that one year of being Japanese, unmistakably and efficiently tell :
-
     </p>
 
 
 
     <p class="observation">
-
         1. Touch, keep it out of Commerce !! : The transactions are strictly and unapologetically commercial. Touch is personal.
-
     </p>
 
 
 
     <p class="observation">
-
         2. Radically transparent, disguised as a tray : You spread the notes and coins in the tray, both parties will see the exact amount again, count them and confirm them —  no dispute. Even while they give back the bills in front of you, they count them, confirm them and keep them on the tray. No touch to confirm the trust.
-
     </p>
 
 
 
     <p>
-
         They are the masters of  kufū- “a small, often simple looking solution that quietly solves a real problem through design”.
-
     </p>
 
 
 
     <p>
-
         What interested me more, is when I imagined the same scenario in an Indian Bazaar. We don’t use the tray. We feel the person..Lol..There’s a hand, a haggle and a little talk, if not at least a bargain. Prices at times are not fixed — we bargain. We run on  familiarity. We bargain even if there are fixed price tags attached. We bargain even with a touch at times. 
-
     </p>
 
 
 
     <p>
-
         The good and bad of staying in ’touch’ : The good is social capital—  a decade of haggling until the ‘dukandaar’ knows you. The Japanese built this trust, even without years of ‘touch transactions’. The bad part is information asymmetry. The distance created by the tray and the non-existent MRP, makes the transaction highly mechanical. 
-
     </p>
 
 
 
     <p>
-
         Handing over the money with hand is not just a custom in India. Some culture even considers it rude if this personal touch is not there. But here’s this thing , neither you or the blue tray can’t stop : the phone in your pocket. No touch, no tray, no bargain, and no counting change — just a beep confirmation. A kid born after 10 years from now, would never hold cash , no fun of getting beaten up by mom for the faulty change. Indian bargain market still find a place for winning INR2 via UPI, but the touch will vanish. 
-
     </p>
 
 
 
     <p class="final">
-
         Transactions will continue without a tray or touch. The warmth in talking to the QR code with a beep will make a new beginning and culture soon. 
-
     </p>
 
 
