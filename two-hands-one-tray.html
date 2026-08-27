@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Two Hands, One Tray - Zero Touch !! — a field note from Tokyo by Vishnu Chandran.">
+
 <title>Two Hands, One Tray - Zero Touch !!</title>
 
 <!-- Fonts -->
@@ -16,6 +18,22 @@
 
 
 <style>
+
+/* =========================================================
+   COLOR PALETTE
+========================================================= */
+
+:root {
+    --blue: #90D5FF;
+    --blue-dark: #4BA8D8;
+    --navy: #102A43;
+    --text: #243B53;
+    --muted: #627D98;
+    --background: #F5FBFF;
+    --background-soft: #EDF8FD;
+    --line: #D7EAF5;
+}
+
 
 /* =========================================================
    GLOBAL
@@ -31,8 +49,9 @@ html {
 
 body {
     margin: 0;
-    background: #F5FBFF;
-    color: #243B53;
+
+    background: var(--background);
+    color: var(--text);
 
     font-family: "DM Sans", sans-serif;
 
@@ -47,22 +66,28 @@ body {
 
 .top {
     width: 100%;
-    max-width: 760px;
+    max-width: 1060px;
+
     margin: 0 auto;
-    padding: 32px 0 0;
+
+    padding: 32px 20px 0;
 }
 
 .back {
-    color: #627D98;
+    color: var(--muted);
+
     text-decoration: none;
+
     font-size: 12px;
     letter-spacing: 0.04em;
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .back:hover {
-    color: #4BA8D8;
+    color: var(--blue-dark);
 }
 
 
@@ -72,35 +97,41 @@ body {
 
 .article-header {
     width: 100%;
-    max-width: 760px;
+    max-width: 1060px;
 
-    margin: 105px auto 65px;
+    margin: 105px auto 70px;
+
+    padding: 0 20px;
 }
 
 .label {
     margin-bottom: 24px;
 
     font-family: "DM Sans", sans-serif;
+
     font-size: 11px;
     font-weight: 500;
 
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 
-    color: #4BA8D8;
+    color: var(--blue-dark);
 }
 
 h1 {
     margin: 0;
 
     font-family: "Playfair Display", Georgia, serif;
+
     font-size: clamp(3.2rem, 7vw, 5.7rem);
     font-weight: 500;
 
-    line-height: 1.06;
+    line-height: 1.04;
     letter-spacing: -0.045em;
 
-    color: #102A43;
+    color: var(--navy);
+
+    max-width: 1050px;
 }
 
 
@@ -110,15 +141,18 @@ h1 {
 
 .article {
     width: 100%;
-    max-width: 760px;
+    max-width: 1060px;
 
-    margin: 0 auto 110px;
+    margin: 0 auto 120px;
+
+    padding: 0 20px;
 }
 
 
 /* =========================================================
    FLOATING PHOTO
-   PHOTO SITS ON RIGHT AND TEXT WRAPS AROUND IT
+   PHOTO SITS ON RIGHT
+   TEXT WRAPS AROUND IT
 ========================================================= */
 
 .article-image {
@@ -126,7 +160,7 @@ h1 {
 
     width: 47%;
 
-    margin: 0 0 28px 38px;
+    margin: 0 0 30px 45px;
 }
 
 .article-image img {
@@ -137,7 +171,7 @@ h1 {
 
     margin: 0;
 
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 
@@ -146,16 +180,17 @@ h1 {
 ========================================================= */
 
 .article p {
-    margin: 0 0 34px;
+    margin: 0 0 36px;
 
     font-family: "DM Sans", sans-serif;
+
     font-size: 18px;
     font-weight: 400;
 
-    line-height: 1.85;
+    line-height: 1.9;
     letter-spacing: 0;
 
-    color: #243B53;
+    color: var(--text);
 
     text-align: justify;
 }
@@ -166,18 +201,19 @@ h1 {
 ========================================================= */
 
 .opening {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
 }
 
 .opening p {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
 
     font-family: "DM Sans", sans-serif;
+
     font-size: 18px;
 
     line-height: 1.85;
 
-    color: #243B53;
+    color: var(--text);
 
     text-align: left;
 }
@@ -188,8 +224,18 @@ h1 {
 ========================================================= */
 
 .opening p:first-child {
-    color: #102A43;
+    color: var(--navy);
+
     font-weight: 500;
+}
+
+
+/* =========================================================
+   EMPHASIS ON THE INNER THOUGHT
+========================================================= */
+
+.opening p:last-child {
+    color: var(--navy);
 }
 
 
@@ -198,23 +244,35 @@ h1 {
 ========================================================= */
 
 .observation {
-    margin-bottom: 14px !important;
+    margin-bottom: 16px !important;
+
+    color: var(--navy) !important;
+}
+
+
+/* =========================================================
+   SUBTLE ACCENT FOR NUMBERED ITEMS
+========================================================= */
+
+.observation::first-letter {
+    color: var(--blue-dark);
 }
 
 
 /* =========================================================
    FINAL PARAGRAPH
-   NO SEPARATION LINE
 ========================================================= */
 
 .final {
-    margin-top: 42px !important;
+    margin-top: 48px !important;
 
-    padding-top: 0 !important;
+    padding-top: 28px !important;
 
-    border-top: none !important;
+    border-top: 1px solid var(--line);
 
-    color: #102A43 !important;
+    color: var(--navy) !important;
+
+    font-weight: 500;
 }
 
 
@@ -225,20 +283,41 @@ h1 {
 footer {
     width: 100%;
 
-    border-top: 1px solid #D7EAF5;
+    border-top: 1px solid var(--line);
 
     text-align: center;
 
-    padding: 32px 20px 40px;
+    padding: 34px 20px 42px;
 
-    color: #78909C;
+    color: var(--muted);
 
     font-family: "DM Sans", sans-serif;
+
     font-size: 11px;
 
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
 
-    background: #EDF8FD;
+    background: var(--background-soft);
+}
+
+
+/* =========================================================
+   SMALL BLUE DETAIL
+========================================================= */
+
+footer::before {
+    content: "";
+
+    display: block;
+
+    width: 28px;
+    height: 2px;
+
+    margin: 0 auto 22px;
+
+    background: var(--blue);
+
+    border-radius: 2px;
 }
 
 
@@ -263,14 +342,14 @@ footer {
     .article {
         padding: 0 22px;
 
-        margin: 0 auto 85px;
+        margin: 0 auto 90px;
     }
 
 
     /*
        On smaller screens the image becomes full width.
-       Text wrapping around a half-width image would become
-       too cramped.
+       Text wrapping around a half-width image would
+       become too cramped.
     */
 
     .article-image {
@@ -391,7 +470,8 @@ footer {
 
 
     <!-- ===================================================
-         PHOTO — FLOATS RIGHT, TEXT WRAPS AROUND IT
+         PHOTO
+         FLOATS RIGHT — TEXT WRAPS AROUND IT
     ==================================================== -->
 
     <div class="article-image">
@@ -425,13 +505,18 @@ footer {
 
         <p>
             Me : (Thinking.. hand which has cleared over a thousand deals , now has become radioactive..!)
-
+          </p>
+           <p>
             [Zero Japanese. Silence was my mother tongue that week]
         </p>
 
     </div>
 
 
+
+    <!-- ===================================================
+         BODY
+    ==================================================== -->
 
     <p>
         That tray — the karuton — sits in every store, every counter like a referee. The blue tray with tiny bristles inside won’t let even your ¥1 coin roll away. You drop your money in the tray, and presumably it forms no opinions about you.
@@ -440,7 +525,7 @@ footer {
 
 
     <p>
-        Nobody quite knows when and why such a custom started. I searched the GPTs. No founding documents that clearly tell how this has become a habit across Japan.  Some say it traces back to pre-Meiji Japan, when a class of merchants and leatherworkers were treated as untouchables. But for today’s Japan, this could never make any sense. Even the rich - poor, forward- backward has to use the tray. It is now a statement of politeness rather than a class custom. What I can understand, as two main reasons that one year of being Japanese, unmistakably and efficiently tell :
+        Nobody quite knows when and why such a custom started. I searched the GPTs. No founding documents that clearly tell how this has become a habit across Japan. Some say it traces back to pre-Meiji Japan, when a class of merchants and leatherworkers were treated as untouchables. But for today’s Japan, this could never make any sense. Even the rich - poor, forward- backward has to use the tray. It is now a statement of politeness rather than a class custom. What I can understand, as two main reasons that one year of being Japanese, unmistakably and efficiently tell :
     </p>
 
 
@@ -452,37 +537,41 @@ footer {
 
 
     <p class="observation">
-        2. Radically transparent, disguised as a tray : You spread the notes and coins in the tray, both parties will see the exact amount again, count them and confirm them —  no dispute. Even while they give back the bills in front of you, they count them, confirm them and keep them on the tray. No touch to confirm the trust.
+        2. Radically transparent, disguised as a tray : You spread the notes and coins in the tray, both parties will see the exact amount again, count them and confirm them — no dispute. Even while they give back the bills in front of you, they count them, confirm them and keep them on the tray. No touch to confirm the trust.
     </p>
 
 
 
     <p>
-        They are the masters of  kufū- “a small, often simple looking solution that quietly solves a real problem through design”.
+        They are the masters of kufū- “a small, often simple looking solution that quietly solves a real problem through design”.
     </p>
 
 
 
     <p>
-        What interested me more, is when I imagined the same scenario in an Indian Bazaar. We don’t use the tray. We feel the person..Lol..There’s a hand, a haggle and a little talk, if not at least a bargain. Prices at times are not fixed — we bargain. We run on  familiarity. We bargain even if there are fixed price tags attached. We bargain even with a touch at times. 
+        What interested me more, is when I imagined the same scenario in an Indian Bazaar. We don’t use the tray. We feel the person..Lol..There’s a hand, a haggle and a little talk, if not at least a bargain. Prices at times are not fixed — we bargain. We run on familiarity. We bargain even if there are fixed price tags attached. We bargain even with a touch at times.
     </p>
 
 
 
     <p>
-        The good and bad of staying in ’touch’ : The good is social capital—  a decade of haggling until the ‘dukandaar’ knows you. The Japanese built this trust, even without years of ‘touch transactions’. The bad part is information asymmetry. The distance created by the tray and the non-existent MRP, makes the transaction highly mechanical. 
+        The good and bad of staying in ’touch’ : The good is social capital— a decade of haggling until the ‘dukandaar’ knows you. The Japanese built this trust, even without years of ‘touch transactions’. The bad part is information asymmetry. The distance created by the tray and the non-existent MRP, makes the transaction highly mechanical.
     </p>
 
 
 
     <p>
-        Handing over the money with hand is not just a custom in India. Some culture even considers it rude if this personal touch is not there. But here’s this thing , neither you or the blue tray can’t stop : the phone in your pocket. No touch, no tray, no bargain, and no counting change — just a beep confirmation. A kid born after 10 years from now, would never hold cash , no fun of getting beaten up by mom for the faulty change. Indian bargain market still find a place for winning INR2 via UPI, but the touch will vanish. 
+        Handing over the money with hand is not just a custom in India. Some culture even considers it rude if this personal touch is not there. But here’s this thing , neither you or the blue tray can’t stop : the phone in your pocket. No touch, no tray, no bargain, and no counting change — just a beep confirmation. A kid born after 10 years from now, would never hold cash , no fun of getting beaten up by mom for the faulty change. Indian bargain market still find a place for winning INR2 via UPI, but the touch will vanish.
     </p>
 
 
+
+    <!-- ===================================================
+         FINAL
+    ==================================================== -->
 
     <p class="final">
-        Transactions will continue without a tray or touch. The warmth in talking to the QR code with a beep will make a new beginning and culture soon. 
+        Transactions will continue without a tray or touch. The warmth in talking to the QR code with a beep will make a new beginning and culture soon.
     </p>
 
 
