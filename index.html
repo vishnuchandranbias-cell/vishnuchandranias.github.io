@@ -3,700 +3,2936 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="Vishnu Chandran — civil servant, public policy practitioner, student of governance, cities, skills, data and society. Field notes, essays, research and reflections.">
 <meta name="author" content="Vishnu Chandran">
-<meta name="theme-color" content="#0b0d0f">
+<meta name="theme-color" content="#102A3A">
+
 <title>Vishnu Chandran — Field Notes on Society, Governance & the Examined Life</title>
 
-<!--
-  VISHNU CHANDRAN — PERSONAL WEBSITE MASTER TEMPLATE
-  --------------------------------------------------
-  Design direction:
-  - editorial / intellectual rather than corporate
-  - dark "ink" canvas with warm paper reading surfaces
-  - oversized typography, restrained motion, generous whitespace
-  - built as a single self-contained HTML file
-  - no framework or build step required
-
-  IMPORTANT:
-  The biographical facts in this first version are based on publicly
-  available sources researched in August 2026. Items that may change
-  (especially current posting) should be updated periodically.
--->
-
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
 
+
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root{
-  --ink:#0b0d0f;
-  --ink-2:#111519;
+
+  --ink:#102A3A;
+  --ink-2:#16384A;
+
   --paper:#f4f0e8;
   --paper-2:#e9e3d8;
+
   --text:#1a1d1f;
   --muted:#6b6d6a;
+
   --line:rgba(26,29,31,.14);
+
   --white:#faf9f5;
-  --accent:#c76d3b;
-  --accent-2:#8f4b2b;
+
+  --accent:#90D5FF;
+  --accent-dark:#4EA9D8;
+
   --max:1240px;
+
   --radius:22px;
+
   --shadow:0 18px 60px rgba(0,0,0,.13);
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--text);
-  font-family:"DM Sans",system-ui,sans-serif;
-  line-height:1.65;
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+  box-sizing:border-box;
 }
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-button{font:inherit}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  margin:0;
+
+  background:var(--paper);
+
+  color:var(--text);
+
+  font-family:"DM Sans",system-ui,sans-serif;
+
+  line-height:1.65;
+
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+button{
+  font:inherit;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 .nav{
-  position:fixed;top:0;left:0;right:0;z-index:50;
-  background:rgba(11,13,15,.88);
+
+  position:fixed;
+
+  top:0;
+  left:0;
+  right:0;
+
+  z-index:50;
+
+  background:rgba(16,42,58,.94);
+
   backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(255,255,255,.09);
+
+  border-bottom:1px solid rgba(255,255,255,.12);
+
 }
+
 .nav-inner{
-  max-width:var(--max);margin:auto;padding:14px 28px;
-  display:flex;align-items:center;justify-content:space-between;gap:20px;
+
+  max-width:var(--max);
+
+  margin:auto;
+
+  padding:14px 28px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
 }
-.logo{color:var(--white);font-weight:700;letter-spacing:-.02em}
-.logo span{color:var(--accent)}
-.nav-links{display:flex;gap:22px;align-items:center}
+
+.logo{
+
+  color:var(--white);
+
+  font-weight:700;
+
+  letter-spacing:-.02em;
+
+}
+
+.logo span{
+
+  color:var(--accent);
+
+}
+
+.nav-links{
+
+  display:flex;
+
+  gap:22px;
+
+  align-items:center;
+
+}
+
 .nav-links a{
-  color:#c9ccca;font-size:.83rem;letter-spacing:.03em;
+
+  color:#d3e3eb;
+
+  font-size:.83rem;
+
+  letter-spacing:.03em;
+
   transition:.2s ease;
+
 }
-.nav-links a:hover{color:#fff}
+
+.nav-links a:hover{
+
+  color:var(--accent);
+
+}
+
 .nav-cta{
-  padding:8px 13px;border:1px solid rgba(255,255,255,.2);
-  border-radius:999px;color:#fff!important;
+
+  padding:8px 13px;
+
+  border:1px solid rgba(144,213,255,.55);
+
+  border-radius:999px;
+
+  color:var(--accent)!important;
+
 }
-.menu{display:none;color:#fff;background:none;border:0;font-size:1.4rem}
+
+.menu{
+
+  display:none;
+
+  color:#fff;
+
+  background:none;
+
+  border:0;
+
+  font-size:1.4rem;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
-  min-height:100vh;background:var(--ink);color:#fff;
-  position:relative;overflow:hidden;display:flex;align-items:center;
+
+  min-height:100vh;
+
+  background:var(--ink);
+
+  color:#fff;
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:flex;
+
+  align-items:center;
+
 }
+
 .hero:before{
-  content:"";position:absolute;width:620px;height:620px;
-  border:1px solid rgba(199,109,59,.28);border-radius:50%;
-  right:-180px;top:-160px;
+
+  content:"";
+
+  position:absolute;
+
+  width:620px;
+
+  height:620px;
+
+  border:1px solid rgba(144,213,255,.28);
+
+  border-radius:50%;
+
+  right:-180px;
+
+  top:-160px;
+
 }
+
 .hero:after{
-  content:"";position:absolute;width:360px;height:360px;
-  border:1px solid rgba(255,255,255,.09);border-radius:50%;
-  right:40px;top:70px;
+
+  content:"";
+
+  position:absolute;
+
+  width:360px;
+
+  height:360px;
+
+  border:1px solid rgba(144,213,255,.16);
+
+  border-radius:50%;
+
+  right:40px;
+
+  top:70px;
+
 }
+
 .hero-grid{
-  max-width:var(--max);width:100%;margin:auto;padding:140px 28px 80px;
-  display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:end;
-  position:relative;z-index:2;
+
+  max-width:var(--max);
+
+  width:100%;
+
+  margin:auto;
+
+  padding:140px 28px 80px;
+
+  display:grid;
+
+  grid-template-columns:1.25fr .75fr;
+
+  gap:80px;
+
+  align-items:end;
+
+  position:relative;
+
+  z-index:2;
+
 }
+
 .eyebrow{
-  font-family:"DM Mono",monospace;font-size:.73rem;letter-spacing:.13em;
-  text-transform:uppercase;color:#aeb2af;margin-bottom:25px;
+
+  font-family:"DM Mono",monospace;
+
+  font-size:.73rem;
+
+  letter-spacing:.13em;
+
+  text-transform:uppercase;
+
+  color:#b9d0dc;
+
+  margin-bottom:25px;
+
 }
+
 .hero h1{
-  font-family:"Playfair Display",Georgia,serif;font-weight:600;
-  font-size:clamp(4rem,9vw,8.5rem);line-height:.88;letter-spacing:-.055em;
-  margin:0 0 34px;max-width:900px;
-}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-deck{
-  font-size:clamp(1.05rem,1.6vw,1.35rem);color:#c7cbc8;
-  max-width:680px;margin:0 0 36px;
-}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:12px 18px;border-radius:999px;font-size:.88rem;font-weight:600;
-  border:1px solid rgba(255,255,255,.18);color:#fff;
-}
-.btn.primary{background:var(--accent);border-color:var(--accent)}
-.btn.light{background:#fff;color:var(--ink);border-color:#fff}
-.hero-side{padding-bottom:10px}
-.identity-card{
-  border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);
-  border-radius:var(--radius);padding:25px;backdrop-filter:blur(12px);
-}
-.identity-card .big{
-  font-family:"Playfair Display",serif;font-size:2rem;line-height:1.15;margin-bottom:12px;
-}
-.identity-card p{color:#aeb2af;margin:0 0 20px}
-.meta-row{
-  display:grid;grid-template-columns:1fr 1fr;gap:14px;
-  padding-top:17px;border-top:1px solid rgba(255,255,255,.1);
-}
-.meta-row strong{display:block;color:#fff;font-size:.92rem}
-.meta-row span{display:block;color:#858b87;font-size:.75rem}
 
-.section{padding:115px 28px}
-.container{max-width:var(--max);margin:auto}
-.section-head{
-  display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:52px;
-}
-.kicker{
-  font-family:"DM Mono",monospace;color:var(--accent);font-size:.72rem;
-  text-transform:uppercase;letter-spacing:.13em;
-}
-.section h2{
   font-family:"Playfair Display",Georgia,serif;
-  font-size:clamp(2.7rem,5vw,5rem);line-height:.98;letter-spacing:-.04em;
+
+  font-weight:600;
+
+  font-size:clamp(4rem,9vw,8.5rem);
+
+  line-height:.88;
+
+  letter-spacing:-.055em;
+
+  margin:0 0 34px;
+
+  max-width:900px;
+
+}
+
+.hero h1 em{
+
+  font-style:normal;
+
+  color:var(--accent);
+
+}
+
+.hero-deck{
+
+  font-size:clamp(1.05rem,1.6vw,1.35rem);
+
+  color:#c7d7df;
+
+  max-width:680px;
+
+  margin:0 0 36px;
+
+}
+
+.hero-actions{
+
+  display:flex;
+
+  gap:12px;
+
+  flex-wrap:wrap;
+
+}
+
+.btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:8px;
+
+  padding:12px 18px;
+
+  border-radius:999px;
+
+  font-size:.88rem;
+
+  font-weight:600;
+
+  border:1px solid rgba(255,255,255,.22);
+
+  color:#fff;
+
+  transition:.2s ease;
+
+}
+
+.btn:hover{
+
+  transform:translateY(-2px);
+
+}
+
+.btn.primary{
+
+  background:var(--accent);
+
+  border-color:var(--accent);
+
+  color:#102A3A;
+
+}
+
+.btn.light{
+
+  background:#fff;
+
+  color:var(--ink);
+
+  border-color:#fff;
+
+}
+
+.hero-side{
+
+  padding-bottom:10px;
+
+}
+
+.identity-card{
+
+  border:1px solid rgba(144,213,255,.18);
+
+  background:rgba(255,255,255,.055);
+
+  border-radius:var(--radius);
+
+  padding:25px;
+
+  backdrop-filter:blur(12px);
+
+}
+
+.identity-card .big{
+
+  font-family:"Playfair Display",serif;
+
+  font-size:2rem;
+
+  line-height:1.15;
+
+  margin-bottom:12px;
+
+}
+
+.identity-card p{
+
+  color:#b9cbd4;
+
+  margin:0 0 20px;
+
+}
+
+.meta-row{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:14px;
+
+  padding-top:17px;
+
+  border-top:1px solid rgba(255,255,255,.1);
+
+}
+
+.meta-row strong{
+
+  display:block;
+
+  color:#fff;
+
+  font-size:.92rem;
+
+}
+
+.meta-row span{
+
+  display:block;
+
+  color:#91a6b0;
+
+  font-size:.75rem;
+
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.section{
+
+  padding:115px 28px;
+
+}
+
+.container{
+
+  max-width:var(--max);
+
+  margin:auto;
+
+}
+
+.section-head{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  align-items:end;
+
+  margin-bottom:52px;
+
+}
+
+.kicker{
+
+  font-family:"DM Mono",monospace;
+
+  color:var(--accent-dark);
+
+  font-size:.72rem;
+
+  text-transform:uppercase;
+
+  letter-spacing:.13em;
+
+}
+
+.section h2{
+
+  font-family:"Playfair Display",Georgia,serif;
+
+  font-size:clamp(2.7rem,5vw,5rem);
+
+  line-height:.98;
+
+  letter-spacing:-.04em;
+
   margin:10px 0 0;
-}
-.section-head p{max-width:420px;color:var(--muted);margin:0}
 
-.intro{background:var(--paper)}
-.intro-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:80px}
+}
+
+.section-head p{
+
+  max-width:420px;
+
+  color:var(--muted);
+
+  margin:0;
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+
+  background:var(--paper);
+
+}
+
+.intro-grid{
+
+  display:grid;
+
+  grid-template-columns:.7fr 1.3fr;
+
+  gap:80px;
+
+}
+
 .quote{
-  font-family:"Playfair Display",serif;font-size:2.15rem;line-height:1.22;
-  border-left:3px solid var(--accent);padding-left:24px;margin:0;
-}
-.prose{font-size:1.06rem;color:#3e4140}
-.prose p{margin-top:0;margin-bottom:20px}
 
-.dark{background:var(--ink);color:#fff}
-.dark .section-head p{color:#969c98}
-.dark .kicker{color:#e18a55}
+  font-family:"Playfair Display",serif;
+
+  font-size:2.15rem;
+
+  line-height:1.22;
+
+  border-left:3px solid var(--accent-dark);
+
+  padding-left:24px;
+
+  margin:0;
+
+}
+
+.prose{
+
+  font-size:1.06rem;
+
+  color:#3e4140;
+
+}
+
+.prose p{
+
+  margin-top:0;
+
+  margin-bottom:20px;
+
+}
+
+
+/* =========================================================
+   DARK SECTIONS
+========================================================= */
+
+.dark{
+
+  background:var(--ink);
+
+  color:#fff;
+
+}
+
+.dark .section-head p{
+
+  color:#a9bdc7;
+
+}
+
+.dark .kicker{
+
+  color:var(--accent);
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
 
 .cards{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:16px;
+
 }
+
 .card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:25px;min-height:250px;position:relative;overflow:hidden;
+
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:var(--radius);
+
+  padding:25px;
+
+  min-height:250px;
+
+  position:relative;
+
+  overflow:hidden;
+
   transition:transform .25s ease,box-shadow .25s ease;
+
 }
-.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.dark .card{background:#13181b;border-color:rgba(255,255,255,.09)}
+
+.card:hover{
+
+  transform:translateY(-5px);
+
+  box-shadow:var(--shadow);
+
+}
+
+.dark .card{
+
+  background:var(--ink-2);
+
+  border-color:rgba(144,213,255,.12);
+
+}
+
 .card-num{
-  font-family:"DM Mono",monospace;font-size:.7rem;color:var(--accent);
+
+  font-family:"DM Mono",monospace;
+
+  font-size:.7rem;
+
+  color:var(--accent);
+
 }
-.card h3{font-family:"Playfair Display",serif;font-size:1.65rem;line-height:1.05;margin:55px 0 12px}
-.card p{color:var(--muted);font-size:.92rem}
-.dark .card p{color:#929994}
-.arrow{position:absolute;right:22px;bottom:20px;font-size:1.2rem}
+
+.card h3{
+
+  font-family:"Playfair Display",serif;
+
+  font-size:1.65rem;
+
+  line-height:1.05;
+
+  margin:55px 0 12px;
+
+}
+
+.card p{
+
+  color:var(--muted);
+
+  font-size:.92rem;
+
+}
+
+.dark .card p{
+
+  color:#9db0b9;
+
+}
+
+.arrow{
+
+  position:absolute;
+
+  right:22px;
+
+  bottom:20px;
+
+  font-size:1.2rem;
+
+  color:var(--accent);
+
+}
+
+
+/* =========================================================
+   FEATURED NOTES
+========================================================= */
 
 .feature{
-  display:grid;grid-template-columns:1fr 1fr;gap:18px;
-}
-.feature-main,.feature-side article{
-  border-radius:var(--radius);overflow:hidden;position:relative;
-}
-.feature-main{
-  min-height:570px;background:
-  linear-gradient(135deg,#20272b,#0d1012);
-  color:#fff;padding:38px;display:flex;align-items:end;
-}
-.feature-main:before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(circle at 75% 25%,rgba(199,109,59,.45),transparent 28%),
-             linear-gradient(180deg,transparent 35%,rgba(0,0,0,.72));
-}
-.feature-content{position:relative;z-index:1;max-width:650px}
-.feature-content .tag,.article .tag{
-  font-family:"DM Mono",monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
-  color:#e9a073;
-}
-.feature-content h3{
-  font-family:"Playfair Display",serif;font-size:clamp(2.3rem,4vw,4.4rem);
-  line-height:.98;margin:12px 0;
-}
-.feature-content p{color:#d0d3d1;max-width:570px}
-.feature-side{display:grid;grid-template-rows:1fr 1fr;gap:18px}
-.feature-side article{
-  background:#fff;padding:28px;border:1px solid var(--line);
-}
-.feature-side h3{
-  font-family:"Playfair Display",serif;font-size:2rem;line-height:1.05;margin:16px 0 10px;
-}
-.feature-side p{color:var(--muted);font-size:.92rem}
 
-.timeline{position:relative;border-left:1px solid var(--line);margin-left:10px}
-.timeline-item{position:relative;padding:0 0 48px 40px;display:grid;grid-template-columns:110px 1fr;gap:30px}
-.timeline-item:before{
-  content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;
-  border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--paper);
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:18px;
+
 }
-.year{font-family:"DM Mono",monospace;font-size:.75rem;color:var(--accent)}
-.timeline h3{margin:0;font-family:"Playfair Display",serif;font-size:1.55rem}
-.timeline p{margin:5px 0 0;color:var(--muted)}
+
+.feature-main,
+
+.feature-side article{
+
+  border-radius:var(--radius);
+
+  overflow:hidden;
+
+  position:relative;
+
+}
+
+.feature-main{
+
+  min-height:570px;
+
+  background:
+
+    radial-gradient(
+
+      circle at 75% 25%,
+
+      rgba(144,213,255,.28),
+
+      transparent 28%
+
+    ),
+
+    linear-gradient(
+
+      135deg,
+
+      #1d465d,
+
+      #102A3A
+
+    );
+
+  color:#fff;
+
+  padding:38px;
+
+  display:flex;
+
+  align-items:end;
+
+}
+
+.feature-main:before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    linear-gradient(
+
+      180deg,
+
+      transparent 35%,
+
+      rgba(8,24,34,.72)
+
+    );
+
+}
+
+.feature-content{
+
+  position:relative;
+
+  z-index:1;
+
+  max-width:650px;
+
+}
+
+.feature-content .tag,
+
+.article .tag{
+
+  font-family:"DM Mono",monospace;
+
+  font-size:.68rem;
+
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
+
+  color:var(--accent);
+
+}
+
+.feature-content h3{
+
+  font-family:"Playfair Display",serif;
+
+  font-size:clamp(2.3rem,4vw,4.4rem);
+
+  line-height:.98;
+
+  margin:12px 0;
+
+}
+
+.feature-content p{
+
+  color:#d0dfe5;
+
+  max-width:570px;
+
+}
+
+.feature-side{
+
+  display:grid;
+
+  grid-template-rows:1fr 1fr;
+
+  gap:18px;
+
+}
+
+.feature-side article{
+
+  background:#fff;
+
+  padding:28px;
+
+  border:1px solid var(--line);
+
+}
+
+.feature-side h3{
+
+  font-family:"Playfair Display",serif;
+
+  font-size:2rem;
+
+  line-height:1.05;
+
+  margin:16px 0 10px;
+
+}
+
+.feature-side p{
+
+  color:var(--muted);
+
+  font-size:.92rem;
+
+}
+
+.feature-side a{
+
+  color:#2c82b0;
+
+  text-decoration:underline;
+
+  text-underline-offset:4px;
+
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline{
+
+  position:relative;
+
+  border-left:1px solid rgba(144,213,255,.25);
+
+  margin-left:10px;
+
+}
+
+.timeline-item{
+
+  position:relative;
+
+  padding:0 0 48px 40px;
+
+  display:grid;
+
+  grid-template-columns:110px 1fr;
+
+  gap:30px;
+
+}
+
+.timeline-item:before{
+
+  content:"";
+
+  position:absolute;
+
+  left:-5px;
+
+  top:7px;
+
+  width:9px;
+
+  height:9px;
+
+  border-radius:50%;
+
+  background:var(--accent);
+
+  box-shadow:0 0 0 5px var(--ink);
+
+}
+
+.year{
+
+  font-family:"DM Mono",monospace;
+
+  font-size:.75rem;
+
+  color:var(--accent);
+
+}
+
+.timeline h3{
+
+  margin:0;
+
+  font-family:"Playfair Display",serif;
+
+  font-size:1.55rem;
+
+}
+
+.timeline p{
+
+  margin:5px 0 0;
+
+  color:#9db0b9;
+
+}
+
+
+/* =========================================================
+   NUMBERS
+========================================================= */
 
 .numbers{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);
-}
-.number{
-  padding:35px 28px;background:var(--ink-2);min-height:170px;
-}
-.number strong{font-family:"Playfair Display",serif;font-size:3.2rem;display:block;color:#fff}
-.number span{color:#929994;font-size:.82rem}
 
-.notes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.note{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:30px;min-height:310px;display:flex;flex-direction:column;
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:1px;
+
+  background:rgba(144,213,255,.14);
+
+  border:1px solid rgba(144,213,255,.14);
+
 }
-.note .tag{font-family:"DM Mono",monospace;color:var(--accent);font-size:.68rem;text-transform:uppercase}
-.note h3{font-family:"Playfair Display",serif;font-size:1.9rem;line-height:1.08;margin:30px 0 12px}
-.note p{color:var(--muted);font-size:.92rem}
-.note-footer{margin-top:auto;padding-top:22px;font-size:.77rem;color:#888}
+
+.number{
+
+  padding:35px 28px;
+
+  background:var(--ink-2);
+
+  min-height:170px;
+
+}
+
+.number strong{
+
+  font-family:"Playfair Display",serif;
+
+  font-size:3.2rem;
+
+  display:block;
+
+  color:#fff;
+
+}
+
+.number span{
+
+  color:#9db0b9;
+
+  font-size:.82rem;
+
+}
+
+
+/* =========================================================
+   RESEARCH NOTES
+========================================================= */
+
+.notes-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:18px;
+
+}
+
+.note{
+
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:var(--radius);
+
+  padding:30px;
+
+  min-height:310px;
+
+  display:flex;
+
+  flex-direction:column;
+
+}
+
+.note .tag{
+
+  font-family:"DM Mono",monospace;
+
+  color:var(--accent-dark);
+
+  font-size:.68rem;
+
+  text-transform:uppercase;
+
+}
+
+.note h3{
+
+  font-family:"Playfair Display",serif;
+
+  font-size:1.9rem;
+
+  line-height:1.08;
+
+  margin:30px 0 12px;
+
+}
+
+.note p{
+
+  color:var(--muted);
+
+  font-size:.92rem;
+
+}
+
+.note-footer{
+
+  margin-top:auto;
+
+  padding-top:22px;
+
+  font-size:.77rem;
+
+  color:#888;
+
+}
+
+
+/* =========================================================
+   NOW
+========================================================= */
 
 .now{
-  background:#ded7c9;
+
+  background:#dcecf3;
+
 }
-.now-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+.now-grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:20px;
+
+}
+
 .now-panel{
-  background:rgba(255,255,255,.5);border:1px solid rgba(0,0,0,.08);
-  border-radius:var(--radius);padding:32px;
+
+  background:rgba(255,255,255,.55);
+
+  border:1px solid rgba(16,42,58,.1);
+
+  border-radius:var(--radius);
+
+  padding:32px;
+
 }
-.now-panel h3{font-family:"Playfair Display",serif;font-size:2rem;margin:0 0 15px}
-.now-panel p{color:#505350}
-.list{margin:0;padding:0;list-style:none}
-.list li{padding:12px 0;border-bottom:1px solid rgba(0,0,0,.1);display:flex;justify-content:space-between;gap:20px}
-.list li:last-child{border:0}
-.list span:last-child{color:var(--muted);font-family:"DM Mono",monospace;font-size:.7rem}
+
+.now-panel h3{
+
+  font-family:"Playfair Display",serif;
+
+  font-size:2rem;
+
+  margin:0 0 15px;
+
+}
+
+.now-panel p{
+
+  color:#505b60;
+
+}
+
+.list{
+
+  margin:0;
+
+  padding:0;
+
+  list-style:none;
+
+}
+
+.list li{
+
+  padding:12px 0;
+
+  border-bottom:1px solid rgba(0,0,0,.1);
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+}
+
+.list li:last-child{
+
+  border:0;
+
+}
+
+.list span:last-child{
+
+  color:var(--muted);
+
+  font-family:"DM Mono",monospace;
+
+  font-size:.7rem;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about{
-  background:#fff;
-}
-.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px}
-.principles{display:grid;gap:12px}
-.principle{
-  border-top:1px solid var(--line);padding:20px 0;
-  display:grid;grid-template-columns:55px 1fr;gap:20px;
-}
-.principle b{font-family:"DM Mono",monospace;color:var(--accent);font-size:.72rem}
-.principle h3{margin:0;font-size:1.05rem}
-.principle p{margin:4px 0 0;color:var(--muted);font-size:.9rem}
 
-.sources{background:#f8f6f0}
-.source-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.source{
-  background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px;
+  background:#fff;
+
 }
-.source small{display:block;color:var(--accent);font-family:"DM Mono",monospace;margin-bottom:5px}
-.source a{text-decoration:underline;text-decoration-color:#bbb;text-underline-offset:3px}
+
+.about-grid{
+
+  display:grid;
+
+  grid-template-columns:.9fr 1.1fr;
+
+  gap:90px;
+
+}
+
+.principles{
+
+  display:grid;
+
+  gap:12px;
+
+}
+
+.principle{
+
+  border-top:1px solid var(--line);
+
+  padding:20px 0;
+
+  display:grid;
+
+  grid-template-columns:55px 1fr;
+
+  gap:20px;
+
+}
+
+.principle b{
+
+  font-family:"DM Mono",monospace;
+
+  color:var(--accent-dark);
+
+  font-size:.72rem;
+
+}
+
+.principle h3{
+
+  margin:0;
+
+  font-size:1.05rem;
+
+}
+
+.principle p{
+
+  margin:4px 0 0;
+
+  color:var(--muted);
+
+  font-size:.9rem;
+
+}
+
+
+/* =========================================================
+   SOURCES
+========================================================= */
+
+.sources{
+
+  background:#f8f6f0;
+
+}
+
+.source-list{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+
+}
+
+.source{
+
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:15px;
+
+  padding:18px;
+
+}
+
+.source small{
+
+  display:block;
+
+  color:var(--accent-dark);
+
+  font-family:"DM Mono",monospace;
+
+  margin-bottom:5px;
+
+}
+
+.source a{
+
+  text-decoration:underline;
+
+  text-decoration-color:#bbb;
+
+  text-underline-offset:3px;
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact{
-  background:var(--ink);color:#fff;text-align:center;padding-bottom:140px;
-}
-.contact h2{max-width:850px;margin:10px auto 20px}
-.contact p{color:#aeb2af;max-width:600px;margin:0 auto 30px}
-.footer{
-  background:#070809;color:#858a87;padding:25px 28px;
-  font-size:.75rem;
-}
-.footer-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:20px}
-.footer a{color:#bbb}
 
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
+  background:var(--ink);
+
+  color:#fff;
+
+  text-align:center;
+
+  padding-bottom:140px;
+
+}
+
+.contact h2{
+
+  max-width:850px;
+
+  margin:10px auto 20px;
+
+}
+
+.contact p{
+
+  color:#b4c6cf;
+
+  max-width:600px;
+
+  margin:0 auto 30px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+
+  background:#0c2230;
+
+  color:#8ea4ae;
+
+  padding:25px 28px;
+
+  font-size:.75rem;
+
+}
+
+.footer-inner{
+
+  max-width:var(--max);
+
+  margin:auto;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+}
+
+.footer a{
+
+  color:var(--accent);
+
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.reveal{
+
+  opacity:0;
+
+  transform:translateY(18px);
+
+  transition:opacity .7s ease,transform .7s ease;
+
+}
+
+.reveal.visible{
+
+  opacity:1;
+
+  transform:none;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media(max-width:1000px){
-  .cards{grid-template-columns:1fr 1fr}
-  .hero-grid,.intro-grid,.about-grid{grid-template-columns:1fr;gap:45px}
-  .hero h1{font-size:clamp(4rem,15vw,7rem)}
-  .feature{grid-template-columns:1fr}
-  .notes-grid{grid-template-columns:1fr 1fr}
-  .numbers{grid-template-columns:1fr 1fr}
-}
-@media(max-width:720px){
-  .nav-links{display:none}
-  .menu{display:block}
-  .nav-links.open{
-    display:flex;position:absolute;left:0;right:0;top:56px;
-    padding:18px 28px;background:#0b0d0f;flex-direction:column;align-items:flex-start;
+
+  .cards{
+
+    grid-template-columns:1fr 1fr;
+
   }
-  .section{padding:80px 20px}
-  .nav-inner{padding:13px 20px}
-  .hero-grid{padding:120px 20px 70px}
-  .cards,.notes-grid,.numbers,.source-list,.now-grid{grid-template-columns:1fr}
-  .timeline-item{grid-template-columns:1fr;gap:5px;padding-left:28px}
-  .feature-main{min-height:500px;padding:26px}
-  .feature-content h3{font-size:2.8rem}
-  .section-head{display:block}
-  .section-head p{margin-top:20px}
-  .footer-inner{display:block}
+
+  .hero-grid,
+
+  .intro-grid,
+
+  .about-grid{
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+  }
+
+  .hero h1{
+
+    font-size:clamp(4rem,15vw,7rem);
+
+  }
+
+  .feature{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .notes-grid{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+  .numbers{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
 }
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:720px){
+
+  .nav-links{
+
+    display:none;
+
+  }
+
+  .menu{
+
+    display:block;
+
+  }
+
+  .nav-links.open{
+
+    display:flex;
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    top:56px;
+
+    padding:18px 28px;
+
+    background:var(--ink);
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+  .section{
+
+    padding:80px 20px;
+
+  }
+
+  .nav-inner{
+
+    padding:13px 20px;
+
+  }
+
+  .hero-grid{
+
+    padding:120px 20px 70px;
+
+  }
+
+  .cards,
+
+  .notes-grid,
+
+  .numbers,
+
+  .source-list,
+
+  .now-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .timeline-item{
+
+    grid-template-columns:1fr;
+
+    gap:5px;
+
+    padding-left:28px;
+
+  }
+
+  .feature-main{
+
+    min-height:500px;
+
+    padding:26px;
+
+  }
+
+  .feature-content h3{
+
+    font-size:2.8rem;
+
+  }
+
+  .section-head{
+
+    display:block;
+
+  }
+
+  .section-head p{
+
+    margin-top:20px;
+
+  }
+
+  .footer-inner{
+
+    display:block;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:480px){
+
+  .hero h1{
+
+    font-size:3.7rem;
+
+  }
+
+  .feature-content h3{
+
+    font-size:2.5rem;
+
+  }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =======================================================
+     NAVIGATION
+======================================================= -->
+
 <nav class="nav">
+
   <div class="nav-inner">
-    <a class="logo" href="#top">VISHNU<span>.</span></a>
-    <button class="menu" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+
+    <a class="logo" href="#top">
+      VISHNU<span>.</span>
+    </a>
+
+    <button
+      class="menu"
+      aria-label="Open menu"
+      onclick="document.querySelector('.nav-links').classList.toggle('open')"
+    >
+      ☰
+    </button>
+
     <div class="nav-links">
+
       <a href="#about">About</a>
+
       <a href="#work">Work</a>
+
       <a href="#notes">Notes</a>
+
       <a href="#research">Research</a>
+
       <a href="#journey">Journey</a>
+
       <a href="#now">Now</a>
-      <a class="nav-cta" href="#contact">Say hello</a>
+
+      <a class="nav-cta" href="#contact">
+        Say hello
+      </a>
+
     </div>
+
   </div>
+
 </nav>
 
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
 <header class="hero" id="top">
+
   <div class="hero-grid">
+
     <div>
-      <div class="eyebrow">Vishnu Chandran · IAS 2015 · Tamil Nadu · AI-assisted </div>
-      <h1>People. Places.<br>Ideas. <em>Learning.</em></h1>
+
+      <div class="eyebrow">
+        Vishnu Chandran · IAS 2015 · Tamil Nadu · AI-assisted
+      </div>
+
+      <h1>
+        People. Places.<br>
+        Ideas. <em>Learning.</em>
+      </h1>
+
       <p class="hero-deck">
+
         Notes from a life spent moving between cities, field administration, public policy,
         technology, skills, data — and the questions that sit underneath them.
+
       </p>
+
       <div class="hero-actions">
-        <a class="btn primary" href="#notes">Read the notes →</a>
-        <a class="btn" href="#about">Know my journey</a>
+
+        <a class="btn primary" href="#notes">
+          Read the notes →
+        </a>
+
+        <a class="btn" href="#about">
+          Know my journey
+        </a>
+
       </div>
+
     </div>
 
+
     <aside class="hero-side">
+
       <div class="identity-card">
-        <div class="big">A Student.<br>A civil servant. A traveller.<br>An observer.</div>
+
+        <div class="big">
+          A Student.<br>
+          A civil servant. A traveller.<br>
+          An observer.
+        </div>
+
         <p>
           Electronics engineer by training, public-policy practitioner by profession,
           and a continuing student of economics, governance and people.
         </p>
+
         <div class="meta-row">
-          <div><strong>2015</strong><span>IAS · Tamil Nadu</span></div>
-          <div><strong>2025–26</strong><span>Public Policy · GRIPS, Tokyo</span></div>
+
+          <div>
+            <strong>2015</strong>
+            <span>IAS · Tamil Nadu</span>
+          </div>
+
+          <div>
+            <strong>2025–26</strong>
+            <span>Public Policy · GRIPS, Tokyo</span>
+          </div>
+
         </div>
+
       </div>
+
     </aside>
+
   </div>
+
 </header>
 
+
+
+<!-- =======================================================
+     ABOUT / INTRO
+======================================================= -->
+
 <section class="section intro" id="about">
+
   <div class="container">
+
     <div class="section-head reveal">
-      <div><div class="kicker">01 · The idea</div><h2>A website for things that I forget fast.</h2></div>
-      <p>Not a conventional résumé. Not an official government page. A personal archive of observations, questions, experiments and lessons.</p>
+
+      <div>
+
+        <div class="kicker">
+          01 · The idea
+        </div>
+
+        <h2>
+          A website for things that I forget fast.
+        </h2>
+
+      </div>
+
+      <p>
+        Not a conventional résumé. Not an official government page.
+        A personal archive of observations, questions, experiments and lessons.
+      </p>
+
     </div>
 
+
     <div class="intro-grid reveal">
+
       <blockquote class="quote">
+
         “Life is where ideas meet reality — and reality is usually more interesting.”
+
       </blockquote>
+
+
       <div class="prose">
+
         <p>
           I have spent the last one and a half decade moving through different layers of professions:
           a teacher,a programmer, a postman, administration, municipalities, water, urban governance, government ITIs,
           employment and skills, and policy work in the State Secretariat etc..
         </p>
+
         <p>
           Every posting changes the question. A drought makes water policy tangible. A municipal
           corporation makes urban governance less abstract. An ITI makes the distance between
           education and employment visible. Living and studying in Japan makes it possible to
           look at familiar Indian questions from a different institutional and cultural distance.
         </p>
+
         <p>
           This space is where those observations will accumulate — field notes, essays,
           research, photographs, data experiments, books, travel, people, ideas and unfinished questions.
         </p>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
+
+<!-- =======================================================
+     WORK
+======================================================= -->
 
 <section class="section dark" id="work">
+
   <div class="container">
+
     <div class="section-head reveal">
-      <div><div class="kicker">02 · Territories</div><h2>Four places where I keep looking.</h2></div>
-      <p>The categories will evolve. The underlying curiosity probably will not.</p>
+
+      <div>
+
+        <div class="kicker">
+          02 · Territories
+        </div>
+
+        <h2>
+          Four places where I keep looking.
+        </h2>
+
+      </div>
+
+      <p>
+        The categories will evolve. The underlying curiosity probably will not.
+      </p>
+
     </div>
+
 
     <div class="cards reveal">
+
       <article class="card">
-        <div class="card-num">01 / GOVERNANCE</div>
-        <h3>What makes institutions work?</h3>
-        <p>Districts, cities, departments, implementation, incentives, accountability and the gap between policy intent and lived reality.</p>
+
+        <div class="card-num">
+          01 / GOVERNANCE
+        </div>
+
+        <h3>
+          What makes institutions work?
+        </h3>
+
+        <p>
+          Districts, cities, departments, implementation, incentives, accountability
+          and the gap between policy intent and lived reality.
+        </p>
+
         <div class="arrow">↗</div>
+
       </article>
+
+
       <article class="card">
-        <div class="card-num">02 / PEOPLE</div>
-        <h3>What do systems do to people?</h3>
-        <p>Skills, education, jobs, migration, opportunity and the small administrative decisions that can alter a person's trajectory.</p>
+
+        <div class="card-num">
+          02 / PEOPLE
+        </div>
+
+        <h3>
+          What do systems do to people?
+        </h3>
+
+        <p>
+          Skills, education, jobs, migration, opportunity and the small administrative
+          decisions that can alter a person's trajectory.
+        </p>
+
         <div class="arrow">↗</div>
+
       </article>
+
+
       <article class="card">
-        <div class="card-num">03 / DATA + TECH</div>
-        <h3>Can evidence improve decisions?</h3>
-        <p>Economics, econometrics, geospatial thinking, AI and practical technology — without confusing a dashboard for good governance.</p>
+
+        <div class="card-num">
+          03 / DATA + TECH
+        </div>
+
+        <h3>
+          Can evidence improve decisions?
+        </h3>
+
+        <p>
+          Economics, econometrics, geospatial thinking, AI and practical technology —
+          without confusing a dashboard for good governance.
+        </p>
+
         <div class="arrow">↗</div>
+
       </article>
+
+
       <article class="card">
-        <div class="card-num">04 / INNER LIFE</div>
-        <h3>What happens behind the official?</h3>
-        <p>Books, spirituality, travel, solitude, attention, meaning and the ordinary experiences that shape a decision-maker.</p>
+
+        <div class="card-num">
+          04 / INNER LIFE
+        </div>
+
+        <h3>
+          What happens behind the official?
+        </h3>
+
+        <p>
+          Books, spirituality, travel, solitude, attention, meaning and the ordinary
+          experiences that shape a decision-maker.
+        </p>
+
         <div class="arrow">↗</div>
+
       </article>
+
     </div>
+
   </div>
+
 </section>
+
+
+
+<!-- =======================================================
+     NOTES
+======================================================= -->
 
 <section class="section" id="notes">
+
   <div class="container">
+
     <div class="section-head reveal">
-      <div><div class="kicker">03 · Writing</div><h2>Field notes & longer essays.</h2></div>
-      <p>Start with what I notice. Follow it until it becomes a question worth writing about.</p>
+
+      <div>
+
+        <div class="kicker">
+          03 · Writing
+        </div>
+
+        <h2>
+          Field notes & longer essays.
+        </h2>
+
+      </div>
+
+      <p>
+        Start with what I notice. Follow it until it becomes a question worth writing about.
+      </p>
+
     </div>
+
 
     <div class="feature reveal">
+
+
+      <!-- =================================================
+           NEW ARTICLE
+      ================================================= -->
+
       <article class="feature-main">
+
         <div class="feature-content">
-          <div class="tag">Featured · Field note</div>
-          <h3>The places where policy becomes real</h3>
+
+          <div class="tag">
+            Featured · Field note · Tokyo
+          </div>
+
+          <h3>
+            Two Hands, One Tray - Zero Touch !!
+          </h3>
+
           <p>
-            A continuing series about the distance between an order on paper and the life of the person
-            standing at the receiving end of it.
+            A small observation from a Tokyo konbini about money, touch,
+            politeness, trust, bargaining — and the strange distance created
+            by a little blue tray.
           </p>
-          <a class="btn light" href="#contact">This is where the essays will live →</a>
+
+          <a
+            class="btn light"
+            href="two-hands-one-tray.html"
+          >
+            Read the article →
+          </a>
+
         </div>
+
       </article>
 
+
+
+      <!-- =================================================
+           OTHER NOTES
+      ================================================= -->
+
       <div class="feature-side">
+
         <article>
-          <div class="tag">Governance</div>
-          <h3>The last mile is not a metaphor.</h3>
-          <p>Why implementation deserves as much intellectual attention as policy design.</p>
-          <a href="#research">Explore the research →</a>
+
+          <div class="tag">
+            Governance
+          </div>
+
+          <h3>
+            The last mile is not a metaphor.
+          </h3>
+
+          <p>
+            Why implementation deserves as much intellectual attention as policy design.
+          </p>
+
+          <a href="#research">
+            Explore the research →
+          </a>
+
         </article>
+
+
         <article>
-          <div class="tag">Japan · India</div>
-          <h3>Looking at India from Tokyo.</h3>
-          <p>What distance changes in the way we see cities, local government and public institutions.</p>
-          <a href="#now">See what I am exploring →</a>
+
+          <div class="tag">
+            Japan · India
+          </div>
+
+          <h3>
+            Looking at India from Tokyo.
+          </h3>
+
+          <p>
+            What distance changes in the way we see cities, local government and public institutions.
+          </p>
+
+          <a href="#now">
+            See what I am exploring →
+          </a>
+
         </article>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
+
+
+<!-- =======================================================
+     OPERATING PRINCIPLES
+======================================================= -->
+
 <section class="section about">
+
   <div class="container">
+
     <div class="section-head reveal">
-      <div><div class="kicker">04 · Operating principles</div><h2>Things I am trying to get better at.</h2></div>
-      <p>These are deliberately provisional. A personal website should show the evolution, not pretend the evolution is finished.</p>
+
+      <div>
+
+        <div class="kicker">
+          04 · Operating principles
+        </div>
+
+        <h2>
+          Things I am trying to get better at.
+        </h2>
+
+      </div>
+
+      <p>
+        These are deliberately provisional. A personal website should show the evolution,
+        not pretend the evolution is finished.
+      </p>
+
     </div>
 
+
     <div class="about-grid">
+
+
       <div class="prose reveal">
+
         <p>
           My professional path has moved from engineering and technology into public administration,
           economics, municipal governance, water, district administration and skills development.
           That variety has made me suspicious of single-discipline answers.
         </p>
+
         <p>
           I increasingly want to understand public problems as systems: incentives, institutions,
           people, geography, technology, finance and behaviour interacting at the same time.
         </p>
+
         <p>
-          The website therefore has one central rule: <strong>curiosity before certainty.</strong>
+          The website therefore has one central rule:
+          <strong>curiosity before certainty.</strong>
           A field observation can be wrong. A statistic can mislead. A policy can have an unintended
           consequence. The point of writing is to make the reasoning visible enough to be questioned.
         </p>
+
       </div>
+
 
       <div class="principles reveal">
-        <div class="principle"><b>01</b><div><h3>Look before explaining.</h3><p>Spend time with the actual problem before reaching for a theory.</p></div></div>
-        <div class="principle"><b>02</b><div><h3>Data should sharpen judgement.</h3><p>Numbers are evidence, not substitutes for thinking.</p></div></div>
-        <div class="principle"><b>03</b><div><h3>Institutions matter.</h3><p>Good intentions rarely survive weak systems.</p></div></div>
-        <div class="principle"><b>04</b><div><h3>Stay intellectually unfinished.</h3><p>Change your mind when the evidence deserves it.</p></div></div>
-        <div class="principle"><b>05</b><div><h3>Keep the human being visible.</h3><p>Every policy eventually reaches an individual person.</p></div></div>
+
+
+        <div class="principle">
+
+          <b>01</b>
+
+          <div>
+
+            <h3>
+              Look before explaining.
+            </h3>
+
+            <p>
+              Spend time with the actual problem before reaching for a theory.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+
+          <b>02</b>
+
+          <div>
+
+            <h3>
+              Data should sharpen judgement.
+            </h3>
+
+            <p>
+              Numbers are evidence, not substitutes for thinking.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+
+          <b>03</b>
+
+          <div>
+
+            <h3>
+              Institutions matter.
+            </h3>
+
+            <p>
+              Good intentions rarely survive weak systems.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+
+          <b>04</b>
+
+          <div>
+
+            <h3>
+              Stay intellectually unfinished.
+            </h3>
+
+            <p>
+              Change your mind when the evidence deserves it.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="principle">
+
+          <b>05</b>
+
+          <div>
+
+            <h3>
+              Keep the human being visible.
+            </h3>
+
+            <p>
+              Every policy eventually reaches an individual person.
+            </p>
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
+
+<!-- =======================================================
+     JOURNEY
+======================================================= -->
 
 <section class="section dark" id="journey">
+
   <div class="container">
+
     <div class="section-head reveal">
-      <div><div class="kicker">05 · Journey</div><h2>A career in movement.</h2></div>
-      <p>A simplified public timeline. For exact service records, refer to official government records.</p>
+
+      <div>
+
+        <div class="kicker">
+          05 · Journey
+        </div>
+
+        <h2>
+          A career in movement.
+        </h2>
+
+      </div>
+
+      <p>
+        A simplified public timeline. For exact service records, refer to official government records.
+      </p>
+
     </div>
+
 
     <div class="timeline reveal">
+
+
       <div class="timeline-item">
-        <div class="year">2007–11</div>
-        <div><h3>Engineering</h3><p>B.Tech in Electronics & Communication Engineering, Government Engineering College, Barton Hill, Thiruvananthapuram.</p></div>
+
+        <div class="year">
+          2007–11
+        </div>
+
+        <div>
+
+          <h3>
+            Engineering
+          </h3>
+
+          <p>
+            B.Tech in Electronics & Communication Engineering, Government Engineering College,
+            Barton Hill, Thiruvananthapuram.
+          </p>
+
+        </div>
+
       </div>
+
+
       <div class="timeline-item">
-        <div class="year">Early career</div>
-        <div><h3>Technology → public service</h3><p>Worked at Tata Elxsi before entering the civil services pathway.</p></div>
+
+        <div class="year">
+          Early career
+        </div>
+
+        <div>
+
+          <h3>
+            Technology → public service
+          </h3>
+
+          <p>
+            Worked at Tata Elxsi before entering the civil services pathway.
+          </p>
+
+        </div>
+
       </div>
+
+
       <div class="timeline-item">
-        <div class="year">2015</div>
-        <div><h3>Indian Administrative Service</h3><p>Selected to the IAS, Tamil Nadu cadre, 2015 batch.</p></div>
+
+        <div class="year">
+          2015
+        </div>
+
+        <div>
+
+          <h3>
+            Indian Administrative Service
+          </h3>
+
+          <p>
+            Selected to the IAS, Tamil Nadu cadre, 2015 batch.
+          </p>
+
+        </div>
+
       </div>
+
+
       <div class="timeline-item">
-        <div class="year">2017–21</div>
-        <div><h3>District administration</h3><p>Assistant Collector, Sub Collector, Additional District Magistrate and Executive Officer responsibilities across Tamil Nadu.</p></div>
+
+        <div class="year">
+          2017–21
+        </div>
+
+        <div>
+
+          <h3>
+            District administration
+          </h3>
+
+          <p>
+            Assistant Collector, Sub Collector, Additional District Magistrate and Executive
+            Officer responsibilities across Tamil Nadu.
+          </p>
+
+        </div>
+
       </div>
+
+
       <div class="timeline-item">
-        <div class="year">2021–22</div>
-        <div><h3>Municipal Commissioner · Tirunelveli</h3><p>Led a major urban local-government institution before moving into state-level municipal administration.</p></div>
+
+        <div class="year">
+          2021–22
+        </div>
+
+        <div>
+
+          <h3>
+            Municipal Commissioner · Tirunelveli
+          </h3>
+
+          <p>
+            Led a major urban local-government institution before moving into state-level
+            municipal administration.
+          </p>
+
+        </div>
+
       </div>
+
+
       <div class="timeline-item">
-        <div class="year">2022–23</div>
-        <div><h3>Municipal administration + water</h3><p>Joint Commissioner, Municipal Administration; associated with Tamil Nadu Water Investment Company Limited.</p></div>
+
+        <div class="year">
+          2022–23
+        </div>
+
+        <div>
+
+          <h3>
+            Municipal administration + water
+          </h3>
+
+          <p>
+            Joint Commissioner, Municipal Administration; associated with Tamil Nadu Water
+            Investment Company Limited.
+          </p>
+
+        </div>
+
       </div>
+
+
       <div class="timeline-item">
-        <div class="year">2023–24</div>
-        <div><h3>Collector · Ramanathapuram</h3><p>District administration — a period of intense exposure to agriculture, livelihoods, disaster management and citizen-facing governance.</p></div>
+
+        <div class="year">
+          2023–24
+        </div>
+
+        <div>
+
+          <h3>
+            Collector · Ramanathapuram
+          </h3>
+
+          <p>
+            District administration — a period of intense exposure to agriculture, livelihoods,
+            disaster management and citizen-facing governance.
+          </p>
+
+        </div>
+
       </div>
+
+
       <div class="timeline-item">
-        <div class="year">2024–25</div>
-        <div><h3>State policy + employment & training</h3><p>Moved through Secretariat responsibilities and then served as Director, Employment and Training, focusing on industrial training and employability.</p></div>
+
+        <div class="year">
+          2024–25
+        </div>
+
+        <div>
+
+          <h3>
+            State policy + employment & training
+          </h3>
+
+          <p>
+            Moved through Secretariat responsibilities and then served as Director,
+            Employment and Training, focusing on industrial training and employability.
+          </p>
+
+        </div>
+
       </div>
+
+
       <div class="timeline-item">
-        <div class="year">2025–26</div>
-        <div><h3>Tokyo · Public Policy</h3><p>Master's-level public policy study at the National Graduate Institute for Policy Studies (GRIPS), Japan, alongside continued interest in governance, data and comparative public administration.</p></div>
+
+        <div class="year">
+          2025–26
+        </div>
+
+        <div>
+
+          <h3>
+            Tokyo · Public Policy
+          </h3>
+
+          <p>
+            Master's-level public policy study at the National Graduate Institute for Policy
+            Studies (GRIPS), Japan, alongside continued interest in governance, data and
+            comparative public administration.
+          </p>
+
+        </div>
+
       </div>
+
+
     </div>
+
   </div>
+
 </section>
 
+
+
+<!-- =======================================================
+     RESEARCH
+======================================================= -->
+
 <section class="section dark" id="research">
+
   <div class="container">
+
     <div class="section-head reveal">
-      <div><div class="kicker">06 · Research lens</div><h2>Questions I want to answer with evidence.</h2></div>
-      <p>The research area is where field experience meets economics, data and comparative policy.</p>
+
+      <div>
+
+        <div class="kicker">
+          06 · Research lens
+        </div>
+
+        <h2>
+          Questions I want to answer with evidence.
+        </h2>
+
+      </div>
+
+      <p>
+        The research area is where field experience meets economics, data and comparative policy.
+      </p>
+
     </div>
 
+
     <div class="numbers reveal">
-      <div class="number"><strong>10+</strong><span>years of public-service experience since joining the IAS</span></div>
-      <div class="number"><strong>3</strong><span>interlocking lenses: governance · economics · technology</span></div>
-      <div class="number"><strong>2</strong><span>systems increasingly compared: India and Japan</span></div>
-      <div class="number"><strong>1</strong><span>recurring question: what actually works?</span></div>
+
+
+      <div class="number">
+
+        <strong>
+          10+
+        </strong>
+
+        <span>
+          years of public-service experience since joining the IAS
+        </span>
+
+      </div>
+
+
+      <div class="number">
+
+        <strong>
+          3
+        </strong>
+
+        <span>
+          interlocking lenses: governance · economics · technology
+        </span>
+
+      </div>
+
+
+      <div class="number">
+
+        <strong>
+          2
+        </strong>
+
+        <span>
+          systems increasingly compared: India and Japan
+        </span>
+
+      </div>
+
+
+      <div class="number">
+
+        <strong>
+          1
+        </strong>
+
+        <span>
+          recurring question: what actually works?
+        </span>
+
+      </div>
+
+
     </div>
+
 
     <div style="height:24px"></div>
 
+
     <div class="notes-grid reveal">
+
+
       <article class="note">
-        <div class="tag">Urban governance</div>
-        <h3>Smart cities: intent vs effectiveness</h3>
-        <p>Comparing policy design, institutional architecture, expenditure and implementation in India and Japan.</p>
-        <div class="note-footer">Comparative public policy · cities · decentralisation</div>
+
+        <div class="tag">
+          Urban governance
+        </div>
+
+        <h3>
+          Smart cities: intent vs effectiveness
+        </h3>
+
+        <p>
+          Comparing policy design, institutional architecture, expenditure and implementation
+          in India and Japan.
+        </p>
+
+        <div class="note-footer">
+          Comparative public policy · cities · decentralisation
+        </div>
+
       </article>
+
+
       <article class="note">
-        <div class="tag">Skills + labour</div>
-        <h3>Does vocational training translate into jobs?</h3>
-        <p>Exploring student-level outcomes in Tamil Nadu ITIs and the characteristics associated with employment.</p>
-        <div class="note-footer">ITI · employability · econometrics</div>
+
+        <div class="tag">
+          Skills + labour
+        </div>
+
+        <h3>
+          Does vocational training translate into jobs?
+        </h3>
+
+        <p>
+          Exploring student-level outcomes in Tamil Nadu ITIs and the characteristics associated
+          with employment.
+        </p>
+
+        <div class="note-footer">
+          ITI · employability · econometrics
+        </div>
+
       </article>
+
+
       <article class="note">
-        <div class="tag">Data + institutions</div>
-        <h3>What does administrative data hide?</h3>
-        <p>Questions about selection, measurement, incentives, implementation and the difference between recorded activity and real outcomes.</p>
-        <div class="note-footer">Evidence · evaluation · public management</div>
+
+        <div class="tag">
+          Data + institutions
+        </div>
+
+        <h3>
+          What does administrative data hide?
+        </h3>
+
+        <p>
+          Questions about selection, measurement, incentives, implementation and the difference
+          between recorded activity and real outcomes.
+        </p>
+
+        <div class="note-footer">
+          Evidence · evaluation · public management
+        </div>
+
       </article>
+
+
     </div>
+
   </div>
+
 </section>
+
+
+
+<!-- =======================================================
+     NOW
+======================================================= -->
 
 <section class="section now" id="now">
+
   <div class="container">
+
     <div class="section-head reveal">
-      <div><div class="kicker">07 · Now</div><h2>What I am looking at these days.</h2></div>
-      <p>This section should change often. It makes the website feel alive rather than archived.</p>
+
+      <div>
+
+        <div class="kicker">
+          07 · Now
+        </div>
+
+        <h2>
+          What I am looking at these days.
+        </h2>
+
+      </div>
+
+      <p>
+        This section should change often. It makes the website feel alive rather than archived.
+      </p>
+
     </div>
+
 
     <div class="now-grid reveal">
-      <div class="now-panel">
-        <h3>In Tokyo</h3>
-        <p>
-          Studying public policy at GRIPS while observing Japan — its cities, trains, local institutions,
-          public spaces, ageing society, disaster preparedness and everyday administrative design.
-        </p>
-        <ul class="list">
-          <li><span>Public policy</span><span>GRIPS</span></li>
-          <li><span>India ↔ Japan</span><span>comparison</span></li>
-          <li><span>Urban governance</span><span>field notes</span></li>
-        </ul>
-      </div>
+
 
       <div class="now-panel">
-        <h3>On my desk</h3>
+
+        <h3>
+          In Tokyo
+        </h3>
+
+        <p>
+          Studying public policy at GRIPS while observing Japan — its cities, trains,
+          local institutions, public spaces, ageing society, disaster preparedness and
+          everyday administrative design.
+        </p>
+
         <ul class="list">
-          <li><span>Economics & econometrics</span><span>learning</span></li>
-          <li><span>AI & public administration</span><span>exploring</span></li>
-          <li><span>ITI outcomes</span><span>research</span></li>
-          <li><span>Local government</span><span>thinking</span></li>
-          <li><span>Travel & field journals</span><span>writing</span></li>
+
+          <li>
+            <span>Public policy</span>
+            <span>GRIPS</span>
+          </li>
+
+          <li>
+            <span>India ↔ Japan</span>
+            <span>comparison</span>
+          </li>
+
+          <li>
+            <span>Urban governance</span>
+            <span>field notes</span>
+          </li>
+
         </ul>
+
       </div>
+
+
+      <div class="now-panel">
+
+        <h3>
+          On my desk
+        </h3>
+
+        <ul class="list">
+
+          <li>
+            <span>Economics & econometrics</span>
+            <span>learning</span>
+          </li>
+
+          <li>
+            <span>AI & public administration</span>
+            <span>exploring</span>
+          </li>
+
+          <li>
+            <span>ITI outcomes</span>
+            <span>research</span>
+          </li>
+
+          <li>
+            <span>Local government</span>
+            <span>thinking</span>
+          </li>
+
+          <li>
+            <span>Travel & field journals</span>
+            <span>writing</span>
+          </li>
+
+        </ul>
+
+      </div>
+
     </div>
+
   </div>
+
 </section>
+
+
+
+<!-- =======================================================
+     SOURCES
+======================================================= -->
 
 <section class="section sources">
+
   <div class="container">
+
     <div class="section-head reveal">
-      <div><div class="kicker">08 · Verification</div><h2>What is this biography based on?</h2></div>
-      <p>I would rather show the provenance than manufacture an impressive biography.</p>
+
+      <div>
+
+        <div class="kicker">
+          08 · Verification
+        </div>
+
+        <h2>
+          What is this biography based on?
+        </h2>
+
+      </div>
+
+      <p>
+        I would rather show the provenance than manufacture an impressive biography.
+      </p>
+
     </div>
+
 
     <div class="source-list reveal">
-      <div class="source"><small>PROFESSIONAL</small><a href="https://www.linkedin.com/in/vishnu-chandran-88518b50" target="_blank" rel="noopener">LinkedIn — Vishnu Chandran, IAS 2015</a><br><span>Professional profile and education history.</span></div>
-     </div>
+
+      <div class="source">
+
+        <small>
+          PROFESSIONAL
+        </small>
+
+        <a
+          href="https://www.linkedin.com/in/vishnu-chandran-88518b50"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn — Vishnu Chandran, IAS 2015
+        </a>
+
+        <br>
+
+        <span>
+          Professional profile and education history.
+        </span>
+
+      </div>
+
+    </div>
+
   </div>
+
 </section>
+
+
+
+<!-- =======================================================
+     CONTACT
+======================================================= -->
 
 <section class="section contact" id="contact">
+
   <div class="container">
-    <div class="kicker">09 · Contact</div>
-    <h2>Have a question worth thinking about?</h2>
+
+    <div class="kicker">
+      09 · Contact
+    </div>
+
+    <h2>
+      Have a question worth thinking about?
+    </h2>
+
     <p>
       I am interested in conversations around public policy, local governance, economics,
-      technology, skills, cities, India–Japan comparisons and ideas that make us look at familiar
-      problems differently.
+      technology, skills, cities, India–Japan comparisons and ideas that make us look at
+      familiar problems differently.
     </p>
-    <div class="hero-actions" style="justify-content:center">
-      <a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Write to me →</a>
-      <a class="btn" href="https://www.linkedin.com/in/vishnu-chandran-88518b50" target="_blank" rel="noopener">LinkedIn</a>
+
+    <div
+      class="hero-actions"
+      style="justify-content:center"
+    >
+
+      <a
+        class="btn primary"
+        href="mailto:YOUR-EMAIL@example.com"
+      >
+        Write to me →
+      </a>
+
+      <a
+        class="btn"
+        href="https://www.linkedin.com/in/vishnu-chandran-88518b50"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+
     </div>
-    <p style="margin-top:35px;font-size:.75rem">
-      Views expressed here are personal and do not represent the views of the Government of India or the Government of Tamil Nadu.
+
+
+    <p
+      style="margin-top:35px;font-size:.75rem"
+    >
+      Views expressed here are personal and do not represent the views of the Government
+      of India or the Government of Tamil Nadu.
     </p>
+
   </div>
+
 </section>
 
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
 <footer class="footer">
+
   <div class="footer-inner">
-    <span>© <span id="year"></span> Vishnu Chandran</span>
-    <span>Field notes · Policy · Data · Life</span>
-    <span><a href="#top">Back to top ↑</a></span>
+
+    <span>
+      © <span id="year"></span> Vishnu Chandran
+    </span>
+
+    <span>
+      Field notes · Policy · Data · Life
+    </span>
+
+    <span>
+      <a href="#top">
+        Back to top ↑
+      </a>
+    </span>
+
   </div>
+
 </footer>
 
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
 
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting) entry.target.classList.add("visible");
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+const observer = new IntersectionObserver(
+
+  (entries)=>{
+
+    entries.forEach(entry=>{
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("visible");
+
+      }
+
+    });
+
+  },
+
+  {
+    threshold:.12
+  }
+
+);
+
+
+document
+  .querySelectorAll(".reveal")
+  .forEach(el=>observer.observe(el));
+
+
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(a=>{
+
+    a.addEventListener("click",()=>{
+
+      document
+        .querySelector(".nav-links")
+        .classList.remove("open");
+
+    });
+
   });
-},{threshold:.12});
 
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
-
-document.querySelectorAll(".nav-links a").forEach(a=>{
-  a.addEventListener("click",()=>document.querySelector(".nav-links").classList.remove("open"));
-});
 </script>
+
 
 </body>
 </html>
