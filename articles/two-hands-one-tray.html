@@ -31,9 +31,11 @@ html {
 
 body {
     margin: 0;
-    background: #faf9f6;
-    color: #303230;
+    background: #F5FBFF;
+    color: #243B53;
+
     font-family: "DM Sans", sans-serif;
+
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -51,14 +53,16 @@ body {
 }
 
 .back {
-    color: #888b88;
+    color: #627D98;
     text-decoration: none;
     font-size: 12px;
     letter-spacing: 0.04em;
+
+    transition: color 0.2s ease;
 }
 
 .back:hover {
-    color: #b96538;
+    color: #4BA8D8;
 }
 
 
@@ -69,6 +73,7 @@ body {
 .article-header {
     width: 100%;
     max-width: 760px;
+
     margin: 105px auto 65px;
 }
 
@@ -78,10 +83,11 @@ body {
     font-family: "DM Sans", sans-serif;
     font-size: 11px;
     font-weight: 500;
+
     letter-spacing: 0.16em;
     text-transform: uppercase;
 
-    color: #b96538;
+    color: #4BA8D8;
 }
 
 h1 {
@@ -90,10 +96,11 @@ h1 {
     font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(3.2rem, 7vw, 5.7rem);
     font-weight: 500;
+
     line-height: 1.06;
     letter-spacing: -0.045em;
 
-    color: #292b2a;
+    color: #102A43;
 }
 
 
@@ -129,6 +136,8 @@ h1 {
     height: auto;
 
     margin: 0;
+
+    border-radius: 4px;
 }
 
 
@@ -142,10 +151,11 @@ h1 {
     font-family: "DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
+
     line-height: 1.85;
     letter-spacing: 0;
 
-    color: #303230;
+    color: #243B53;
 
     text-align: justify;
 }
@@ -164,9 +174,22 @@ h1 {
 
     font-family: "DM Sans", sans-serif;
     font-size: 18px;
+
     line-height: 1.85;
 
+    color: #243B53;
+
     text-align: left;
+}
+
+
+/* =========================================================
+   FIRST OPENING LINE
+========================================================= */
+
+.opening p:first-child {
+    color: #102A43;
+    font-weight: 500;
 }
 
 
@@ -180,11 +203,18 @@ h1 {
 
 
 /* =========================================================
-   CLEAR FLOAT AFTER WRAPPED SECTION
+   FINAL PARAGRAPH
+   NO SEPARATION LINE
 ========================================================= */
 
 .final {
     margin-top: 42px !important;
+
+    padding-top: 0 !important;
+
+    border-top: none !important;
+
+    color: #102A43 !important;
 }
 
 
@@ -195,17 +225,20 @@ h1 {
 footer {
     width: 100%;
 
-    border-top: 1px solid #deddd8;
+    border-top: 1px solid #D7EAF5;
 
     text-align: center;
 
     padding: 32px 20px 40px;
 
-    color: #999;
+    color: #78909C;
 
     font-family: "DM Sans", sans-serif;
     font-size: 11px;
+
     letter-spacing: 0.03em;
+
+    background: #EDF8FD;
 }
 
 
@@ -219,15 +252,20 @@ footer {
         padding: 25px 22px 0;
     }
 
+
     .article-header {
         padding: 0 22px;
+
         margin: 75px auto 55px;
     }
 
+
     .article {
         padding: 0 22px;
+
         margin: 0 auto 85px;
     }
+
 
     /*
        On smaller screens the image becomes full width.
@@ -243,11 +281,14 @@ footer {
         margin: 0 0 42px 0;
     }
 
+
     .article p,
     .opening p {
         font-size: 17px;
+
         line-height: 1.85;
     }
+
 
     h1 {
         font-size: clamp(3rem, 12vw, 4.5rem);
@@ -266,26 +307,35 @@ footer {
         padding: 22px 18px 0;
     }
 
+
     .article-header {
         padding: 0 18px;
+
         margin: 65px auto 48px;
     }
 
+
     .article {
         padding: 0 18px;
+
         margin: 0 auto 75px;
     }
 
+
     .article-image {
         width: 100%;
+
         margin-bottom: 35px;
     }
+
 
     .article p,
     .opening p {
         font-size: 16.5px;
+
         line-height: 1.85;
     }
+
 
     h1 {
         font-size: 3rem;
@@ -375,8 +425,8 @@ footer {
 
         <p>
             Me : (Thinking.. hand which has cleared over a thousand deals , now has become radioactive..!)
-        
-        [Zero Japanese. Silence was my mother tongue that week]
+
+            [Zero Japanese. Silence was my mother tongue that week]
         </p>
 
     </div>
