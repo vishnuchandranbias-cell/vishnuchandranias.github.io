@@ -1,162 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="In Search of Arigatos — a field note from Tokyo about elevator etiquette, hierarchy, and the small rituals of everyday life in Japan.">
+<title>In Search of Arigatos..</title>
 
-<meta name="author" content="Vishnu Chandran">
+<!-- =========================================================
+     GOOGLE FONTS
+========================================================= -->
 
-<title>In Search of Arigatos.. — Vishnu Chandran</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+>
 
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
-
-
-/* =========================================================
-   ROOT
-========================================================= */
-
-:root{
-
-  --ink:#102A3A;
-  --ink-2:#16384A;
-
-  --paper:#f4f0e8;
-
-  --text:#1a1d1f;
-
-  --muted:#686b69;
-
-  --line:rgba(26,29,31,.14);
-
-  --accent:#90D5FF;
-
-  --accent-dark:#4EA9D8;
-
-  --white:#faf9f5;
-
-  --max:1080px;
-
-}
-
 
 /* =========================================================
    GLOBAL
 ========================================================= */
 
-*{
-  box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
+body {
+    margin: 0;
 
-  margin:0;
+    background: #F5FBFF;
+    color: #243B53;
 
-  background:var(--paper);
+    font-family: "DM Sans", sans-serif;
 
-  color:var(--text);
-
-  font-family:"DM Sans",system-ui,sans-serif;
-
-  line-height:1.75;
-
-}
-
-a{
-
-  color:inherit;
-
-  text-decoration:none;
-
-}
-
-img{
-
-  max-width:100%;
-
-  display:block;
-
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 
 /* =========================================================
-   NAVIGATION
+   TOP / BACK
 ========================================================= */
 
-.nav{
+.top {
+    width: 100%;
+    max-width: 1400px;
 
-  position:fixed;
+    margin: 0 auto;
 
-  top:0;
-
-  left:0;
-
-  right:0;
-
-  z-index:20;
-
-  background:rgba(16,42,58,.94);
-
-  backdrop-filter:blur(18px);
-
-  border-bottom:1px solid rgba(255,255,255,.12);
-
+    padding: 30px 7vw 0;
 }
 
-.nav-inner{
+.back {
+    color: #627D98;
 
-  max-width:1240px;
+    text-decoration: none;
 
-  margin:auto;
+    font-size: 12px;
 
-  padding:14px 28px;
+    letter-spacing: 0.08em;
 
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
+    transition: all 0.25s ease;
 }
 
-.logo{
-
-  color:var(--white);
-
-  font-weight:700;
-
-  letter-spacing:-.02em;
-
-}
-
-.logo span{
-
-  color:var(--accent);
-
-}
-
-.back{
-
-  color:#d5e4eb;
-
-  font-size:.82rem;
-
-}
-
-.back:hover{
-
-  color:var(--accent);
-
+.back:hover {
+    color: #90D5FF;
 }
 
 
@@ -164,150 +82,114 @@ img{
    ARTICLE HEADER
 ========================================================= */
 
-.article-wrap{
+.article-header {
+    width: 100%;
+    max-width: 1400px;
 
-  max-width:var(--max);
+    margin: 95px auto 90px;
 
-  margin:auto;
-
-  padding:150px 28px 110px;
-
+    padding: 0 7vw;
 }
 
-.eyebrow{
+.label {
+    margin-bottom: 25px;
 
-  font-family:"DM Mono",monospace;
+    font-family: "DM Sans", sans-serif;
 
-  color:var(--accent-dark);
+    font-size: 12px;
+    font-weight: 500;
 
-  font-size:.72rem;
+    letter-spacing: 0.20em;
 
-  letter-spacing:.14em;
+    text-transform: uppercase;
 
-  text-transform:uppercase;
-
-  margin-bottom:22px;
-
-}
-
-h1{
-
-  font-family:"Playfair Display",Georgia,serif;
-
-  font-size:clamp(4rem,9vw,8rem);
-
-  line-height:.88;
-
-  letter-spacing:-.055em;
-
-  margin:0;
-
-  max-width:950px;
-
-  color:var(--ink);
-
-}
-
-.subtitle{
-
-  max-width:700px;
-
-  margin:35px 0 55px;
-
-  font-size:1.18rem;
-
-  color:#596064;
-
+    color: #3AA7E8;
 }
 
 
 /* =========================================================
-   HERO IMAGE
+   MAIN TITLE
 ========================================================= */
 
-.hero-image{
+h1 {
+    margin: 0;
 
-  width:100%;
+    max-width: 1300px;
 
-  border-radius:24px;
+    font-family: "Playfair Display", Georgia, serif;
 
-  overflow:hidden;
+    font-size: clamp(4rem, 8vw, 8.5rem);
 
-  background:#ddd;
+    font-weight: 500;
 
-  margin:0 0 14px;
+    line-height: 0.98;
 
-}
+    letter-spacing: -0.055em;
 
-.hero-image img{
-
-  width:100%;
-
-  height:auto;
-
-}
-
-.caption{
-
-  font-size:.75rem;
-
-  color:#777;
-
-  margin-bottom:70px;
-
+    color: #102A43;
 }
 
 
 /* =========================================================
-   ARTICLE LAYOUT
+   ARTICLE CONTAINER
 ========================================================= */
 
-.article-grid{
+.article {
+    width: 100%;
+    max-width: 1400px;
 
-  display:grid;
+    margin: 0 auto 130px;
 
-  grid-template-columns:180px minmax(0,680px);
-
-  gap:55px;
-
-  align-items:start;
-
+    padding: 0 7vw;
 }
 
-.meta{
 
-  position:sticky;
+/* =========================================================
+   PHOTO
+========================================================= */
 
-  top:95px;
+.article-image {
+    float: right;
 
-  font-family:"DM Mono",monospace;
+    width: 46%;
 
-  font-size:.7rem;
+    margin: 0 0 40px 65px;
 
-  text-transform:uppercase;
-
-  letter-spacing:.08em;
-
-  color:#777;
-
+    position: relative;
 }
 
-.meta div{
+.article-image img {
+    display: block;
 
-  padding:12px 0;
+    width: 100%;
 
-  border-top:1px solid var(--line);
+    height: auto;
 
+    border-radius: 3px;
+
+    box-shadow:
+        0 18px 45px rgba(16, 42, 67, 0.10);
+
+    background: #E8F7FE;
 }
 
-.meta strong{
 
-  display:block;
+/* =========================================================
+   IMAGE CAPTION
+========================================================= */
 
-  color:var(--ink);
+.article-image::after {
+    content: "TOKYO · FIELD NOTE";
 
-  margin-bottom:4px;
+    display: block;
 
+    margin-top: 13px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.18em;
+
+    color: #7B9AB0;
 }
 
 
@@ -315,143 +197,108 @@ h1{
    ARTICLE TEXT
 ========================================================= */
 
-.article{
+.article p {
+    margin: 0 0 35px;
 
-  font-size:1.08rem;
+    font-family: "DM Sans", sans-serif;
 
-}
+    font-size: 18px;
 
-.article p{
+    font-weight: 400;
 
-  margin:0 0 25px;
+    line-height: 1.9;
 
-}
+    color: #243B53;
 
-.article .scene{
-
-  font-size:1.28rem;
-
-  line-height:1.55;
-
-  color:var(--ink);
-
-  margin:0 0 34px;
-
-}
-
-.article em{
-
-  font-style:italic;
-
-}
-
-.article strong{
-
-  color:var(--ink);
-
+    text-align: justify;
 }
 
 
 /* =========================================================
-   PULL QUOTE
+   OPENING
 ========================================================= */
 
-.pullquote{
+.opening {
+    margin-bottom: 62px;
+}
 
-  border-left:3px solid var(--accent-dark);
+.opening p {
+    margin: 0 0 35px;
 
-  padding:8px 0 8px 25px;
+    font-family: "DM Sans", sans-serif;
 
-  margin:48px 0;
+    font-size: 18px;
 
-  font-family:"Playfair Display",Georgia,serif;
+    line-height: 1.9;
 
-  font-size:2rem;
+    color: #243B53;
 
-  line-height:1.2;
-
-  color:var(--ink);
-
+    text-align: left;
 }
 
 
 /* =========================================================
-   FACT BOX
+   OPENING — FIRST LINE
 ========================================================= */
 
-.note{
+.opening p:first-child {
+    margin-bottom: 28px;
 
-  margin:45px 0;
+    color: #102A43;
 
-  padding:25px 28px;
-
-  background:#e8f1f4;
-
-  border-radius:18px;
-
-  border:1px solid rgba(16,42,58,.08);
-
-}
-
-.note-label{
-
-  font-family:"DM Mono",monospace;
-
-  color:var(--accent-dark);
-
-  font-size:.68rem;
-
-  letter-spacing:.1em;
-
-  text-transform:uppercase;
-
-  margin-bottom:8px;
-
+    font-weight: 600;
 }
 
 
 /* =========================================================
-   ARTICLE FOOTER
+   SPECIAL SHORT LINES
 ========================================================= */
 
-.article-footer{
+.short-line {
+    margin-bottom: 18px !important;
 
-  margin-top:80px;
+    color: #193B56 !important;
 
-  padding-top:30px;
-
-  border-top:1px solid var(--line);
-
-  display:flex;
-
-  justify-content:space-between;
-
-  gap:20px;
-
-  align-items:center;
-
+    font-weight: 500;
 }
 
-.home-link{
 
-  display:inline-flex;
+/* =========================================================
+   EMPHASIS
+========================================================= */
 
-  padding:11px 17px;
+.emphasis {
+    color: #102A43 !important;
 
-  border-radius:999px;
-
-  background:var(--ink);
-
-  color:#fff;
-
-  font-size:.85rem;
-
+    font-weight: 500;
 }
 
-.home-link:hover{
 
-  background:var(--ink-2);
+/* =========================================================
+   FINAL PARAGRAPH
+========================================================= */
 
+.final {
+    margin-top: 60px !important;
+
+    color: #102A43 !important;
+
+    font-weight: 500;
+
+    font-size: 19px !important;
+}
+
+
+/* =========================================================
+   CLEAR FLOAT
+========================================================= */
+
+.article::after {
+    content: "";
+
+    display: table;
+
+    clear: both;
 }
 
 
@@ -459,35 +306,76 @@ h1{
    FOOTER
 ========================================================= */
 
-.footer{
+footer {
+    width: 100%;
 
-  background:#0c2230;
+    border-top: 1px solid #D5ECF8;
 
-  color:#8ea4ae;
+    text-align: center;
 
-  padding:25px 28px;
+    padding: 35px 20px 45px;
 
-  font-size:.75rem;
+    background: #EDF8FD;
 
+    color: #78909C;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 0.08em;
 }
 
-.footer-inner{
 
-  max-width:1240px;
+/* =========================================================
+   TABLET
+========================================================= */
 
-  margin:auto;
+@media (max-width: 900px) {
 
-  display:flex;
+    .top {
+        padding: 25px 5vw 0;
+    }
 
-  justify-content:space-between;
 
-  gap:20px;
+    .article-header {
+        padding: 0 5vw;
 
-}
+        margin: 75px auto 65px;
+    }
 
-.footer a{
 
-  color:var(--accent);
+    .article {
+        padding: 0 5vw;
+
+        margin-bottom: 100px;
+    }
+
+
+    h1 {
+        font-size: clamp(3.5rem, 10vw, 6.5rem);
+
+        line-height: 1;
+    }
+
+
+    /* Image becomes full width */
+
+    .article-image {
+        float: none;
+
+        width: 100%;
+
+        margin: 0 0 48px;
+    }
+
+
+    .article p,
+    .opening p {
+        font-size: 17px;
+
+        line-height: 1.85;
+    }
 
 }
 
@@ -496,95 +384,77 @@ h1{
    MOBILE
 ========================================================= */
 
-@media(max-width:760px){
+@media (max-width: 520px) {
 
-  .nav-inner{
+    .top {
+        padding: 22px 20px 0;
+    }
 
-    padding:13px 20px;
 
-  }
+    .article-header {
+        padding: 0 20px;
 
-  .article-wrap{
+        margin: 65px auto 50px;
+    }
 
-    padding:125px 20px 80px;
 
-  }
+    .article {
+        padding: 0 20px;
 
-  h1{
+        margin-bottom: 75px;
+    }
 
-    font-size:clamp(3.4rem,17vw,5.5rem);
 
-  }
+    .label {
+        font-size: 10px;
 
-  .subtitle{
+        letter-spacing: 0.16em;
 
-    font-size:1.05rem;
+        margin-bottom: 20px;
+    }
 
-    margin-bottom:38px;
 
-  }
+    h1 {
+        font-size: 3.25rem;
 
-  .hero-image{
+        line-height: 1.02;
 
-    border-radius:16px;
+        letter-spacing: -0.045em;
+    }
 
-  }
 
-  .caption{
+    .article-image {
+        width: 100%;
 
-    margin-bottom:45px;
+        margin: 0 0 38px;
+    }
 
-  }
 
-  .article-grid{
+    .article p,
+    .opening p {
+        font-size: 16.5px;
 
-    grid-template-columns:1fr;
+        line-height: 1.85;
 
-    gap:20px;
+        text-align: left;
+    }
 
-  }
 
-  .meta{
+    .opening {
+        margin-bottom: 48px;
+    }
 
-    position:static;
 
-    display:grid;
+    .opening p:first-child {
+        margin-bottom: 24px;
+    }
 
-    grid-template-columns:1fr 1fr;
 
-    gap:15px;
+    .final {
+        margin-top: 45px !important;
 
-    margin-bottom:20px;
-
-  }
-
-  .article{
-
-    font-size:1.03rem;
-
-  }
-
-  .pullquote{
-
-    font-size:1.65rem;
-
-    margin:38px 0;
-
-  }
-
-  .footer-inner{
-
-    display:block;
-
-  }
-
-  .footer-inner span{
-
-    display:block;
-
-    margin-bottom:8px;
-
-  }
+        font-size: 17px !important;
+    }
 
 }
 
@@ -597,442 +467,193 @@ h1{
 
 
 <!-- =======================================================
-     NAVIGATION
+     BACK
 ======================================================= -->
 
-<nav class="nav">
+<div class="top">
 
-  <div class="nav-inner">
-
-    <a class="logo" href="index.html">
-      VISHNU<span>.</span>
+    <a href="index.html" class="back">
+        ← Back
     </a>
 
-    <a class="back" href="index.html">
-      ← Back to field notes
-    </a>
+</div>
 
-  </div>
 
-</nav>
+<!-- =======================================================
+     ARTICLE HEADER
+======================================================= -->
 
+<header class="article-header">
+
+    <div class="label">
+        FIELD NOTE · TOKYO
+    </div>
+
+    <h1>
+        In Search of Arigatos..
+    </h1>
+
+</header>
 
 
 <!-- =======================================================
      ARTICLE
 ======================================================= -->
 
-<main class="article-wrap">
+<main class="article">
 
 
-  <!-- HEADER -->
+    <!-- ===================================================
+         PHOTO
 
-  <div class="eyebrow">
-    Field Note · Tokyo · Day 2
-  </div>
+         Save your photo in the SAME folder as this HTML
+         using this filename:
 
+         in-search-of-arigatos.jpeg
+    ==================================================== -->
 
-  <h1>
-    In Search of<br>
-    Arigatos..
-  </h1>
+    <div class="article-image">
 
-
-  <p class="subtitle">
-
-    A small elevator ritual in Tokyo, and the first time I realised
-    that even standing beside a lift button could have a social meaning.
-
-  </p>
-
-
-
-  <!-- ARTICLE PHOTO -->
-
-  <figure class="hero-image">
-
-    <img
-      src="in-search-of-arigatos.jpeg"
-      alt="Illustration of passengers following Japanese elevator etiquette"
-    >
-
-  </figure>
-
-
-  <div class="caption">
-
-    A Tokyo elevator, imagined through the small rituals I was beginning to notice.
-
-  </div>
-
-
-
-  <!-- ARTICLE BODY -->
-
-  <div class="article-grid">
-
-
-    <!-- META -->
-
-    <aside class="meta">
-
-      <div>
-
-        <strong>Day</strong>
-
-        2
-
-      </div>
-
-
-      <div>
-
-        <strong>Place</strong>
-
-        Tokyo
-
-      </div>
-
-
-      <div>
-
-        <strong>Theme</strong>
-
-        Everyday etiquette
-
-      </div>
-
-
-      <div>
-
-        <strong>Written</strong>
-
-        2026
-
-      </div>
-
-    </aside>
-
-
-
-    <!-- TEXT -->
-
-    <article class="article">
-
-
-      <p class="scene">
-
-        Initial days to college were always a little tidy and sharp.
-        Remembering which lifts to take, which route to follow, which stairs
-        to find — everything seemed difficult.
-
-      </p>
-
-
-      <p>
-
-        Like a detective, I had to remember the signs.
-        Even the signages initially looked like Egyptian walls.
-        I started memorising the different anime figures I saw along the way.
-        Lifts were no different; there were so many of them to remember.
-
-      </p>
-
-
-      <p>
-
-        One random day, as usual, happy to have found the right lift,
-        I stepped in.
-
-      </p>
-
-
-      <p>
-
-        As we reached our floor, the person standing by the panel held the
-        door open while everyone filed out. One by one, they stepped past him,
-        each person giving a small bow and a soft
-        <em>“arigato gozaimashita.”</em>
-
-      </p>
-
-
-      <p>
-
-        I also stepped out, without a sign or gratitude.
-
-      </p>
-
-
-      <p>
-
-        <strong>Rude me.</strong>
-
-      </p>
-
-
-      <p>
-
-        Actually, I didn't know <em>arigato</em> — the Japanese way of saying
-        “thank you” — either. Pardon my arrogance.
-
-      </p>
-
-
-      <p>
-
-        The second day, the same thing happened.
-
-        Same spot.
-
-        Someone to press the button.
-
-        Same bow.
-
-        Same showering of arigatos.
-
-      </p>
-
-
-
-      <p>
-
-        Then I noticed: the guy was no random.
-
-        He mostly entered at the end, and he kept holding the button
-        until all the older people had filed out.
-
-      </p>
-
-
-
-      <div class="pullquote">
-
-        Nobody had assigned him the job.
-        Nobody had explained it to me.
-        Yet somehow, everybody seemed to know.
-
-      </div>
-
-
-
-      <p>
-
-        I did some ChatGPT.
-
-      </p>
-
-
-      <p>
-
-        It turned out that I wasn't watching mere politeness.
-
-        There is a broader Japanese etiquette of
-        <em>kamiza</em> and <em>shimoza</em> —
-        literally the “upper seat” and “lower seat”.
-
-      </p>
-
-
-      <p>
-
-        In an elevator, the position near the controls is generally treated
-        as the <em>shimoza</em>, the working position. The more senior person
-        or guest is expected to stand farther inside, away from the entrance.
-
-        The person at the panel operates the buttons and holds the door.
-
-      </p>
-
-
-      <p>
-
-        The same idea can appear in taxis, meeting rooms and other seating
-        arrangements. It is less about a rigid rulebook and more about
-        recognising who should be made comfortable — and who should take
-        responsibility for the small practical tasks.
-
-      </p>
-
-
-
-      <!-- SMALL FACTUAL NOTE -->
-
-      <div class="note">
-
-        <div class="note-label">
-          A small correction to my first impression
-        </div>
-
-        The elevator custom is better understood as an application of
-        <em>kamiza-shimoza</em> etiquette, rather than a universal rule that
-        the youngest person must always operate every elevator.
-        Context, workplace culture and practicality still matter.
-
-      </div>
-
-
-
-      <p>
-
-        Nobody assigns this job.
-
-        Nobody explains it.
-
-        No one insists.
-
-      </p>
-
-
-      <p>
-
-        The nice one seems to know — and quietly abide by it.
-
-      </p>
-
-
-      <p>
-
-        And then there were the little emergency provisions inside some
-        elevators. I noticed what looked like a small folded seat or cabinet
-        near the back and initially wondered whether it was meant for someone
-        to sit during the ride.
-
-      </p>
-
-
-      <p>
-
-        It wasn't.
-
-      </p>
-
-
-      <p>
-
-        In some buildings, these are emergency disaster chairs or cabinets,
-        stocked with supplies such as water and emergency toilet facilities
-        for people who may become trapped inside an elevator after a disaster.
-
-      </p>
-
-
-      <p>
-
-        A country accustomed to preparing for earthquakes had thought about
-        something as specific as being stuck inside a lift.
-
-      </p>
-
-
-      <p>
-
-        <strong>They really have thought of everything.</strong>
-
-      </p>
-
-
-      <p>
-
-        By the next week, having learned all about the theory of being the
-        lift operator, I was ready to get some bows and
-        <em>arigato gozaimashita.</em>
-
-      </p>
-
-
-      <p>
-
-        Yeah, it is slightly difficult to get some attention from them otherwise.
-
-      </p>
-
-
-      <p>
-
-        These days, my biggest challenge is finding a lift where I'm still
-        the youngest person by the panel.
-
-      </p>
-
-
-      <p>
-
-        I clearly showed up in this country a few years too late.
-
-      </p>
-
-
-      <p>
-
-        Now I get to “operate” maybe once a week —
-        like a benched player brought in for a nostalgia run.
-
-      </p>
-
-
-
-      <!-- ARTICLE END -->
-
-      <div class="article-footer">
-
-        <span>
-          Field Note · Tokyo
-        </span>
-
-        <a
-          class="home-link"
-          href="index.html"
+        <img
+            src="./in-search-of-arigatos.jpeg"
+            alt="In Search of Arigatos.."
+            loading="eager"
         >
-          ← More field notes
-        </a>
 
-      </div>
+    </div>
 
 
-    </article>
+    <!-- ===================================================
+         OPENING
+    ==================================================== -->
 
-  </div>
+    <div class="opening">
+
+        <p>
+            Day 2, Trip to College
+        </p>
+
+    </div>
+
+
+    <!-- ===================================================
+         ARTICLE BODY
+    ==================================================== -->
+
+    <p>
+        Initial days to college were always a little tidy and sharp. Remembering which lifts to take, which route to follow, which stairs to find — seemed difficult. Like a detective, I had to remember the signs. Even the signages initially looked like Egyptian walls. I started memorising anime figures I see along. Lifts were also no different; so many of them to remember.
+    </p>
+
+
+    <p>
+        One random day, as usual, happy to have found the right lift, I stepped in.
+    </p>
+
+
+    <p>
+        As we reached our floor, the person standing by the panel held the door open while everyone filed out. One by one, they stepped past him, each person gave a small bow and a soft “arigato gozaimashita”.
+    </p>
+
+
+    <p>
+        I also stepped out, without a sign or gratitude.
+    </p>
+
+
+    <p class="short-line">
+        Rude me.
+    </p>
+
+
+    <p>
+        Actually, I didn’t know arigato(Japanese way of “Thank You”) also. Pardon my arrogance.
+    </p>
+
+
+    <p>
+        Second day also, the same happened.
+    </p>
+
+
+    <p class="short-line">
+        Same spot.
+    </p>
+
+
+    <p class="short-line">
+        Someone to press the button, same bow and showering arigatos.
+    </p>
+
+
+    <p>
+        Then I noticed, the guy was no random, he mostly enters at last, and he kept holding the button till all the oldies had filed out.
+    </p>
+
+
+    <p>
+        I did some ChatGPT. It turns out that I wasn’t watching mere politeness. It was some sort of junior duty. There is an entire unwritten public space system running quietly —Kamiza-shimoza—literally “upper seat, lower seat”. Back row is occupied by kamiza, the older lot, while the younger generation will be the one near the elevator buttons.
+    </p>
+
+
+    <p class="short-line">
+        Nobody assigns this job.
+    </p>
+
+
+    <p class="short-line">
+        Nobody explains it.
+    </p>
+
+
+    <p class="short-line">
+        No-one insists.
+    </p>
+
+
+    <p>
+        This is not just followed in Lifts; similar idea is followed in taxis, meeting rooms, seating arrangements etc. No complaints if someone doesn’t follow. The nice one seems to know and abide by it.
+    </p>
+
+
+    <p>
+        Here, some lift also has some small folded seat or platforms at the back. No, it is not for the oldies to sit while travelling. It is for them when they are stuck due to some emergencies. A country with tens of thousands of elevators and frequent earthquake warnings had everything prepared.
+    </p>
+
+
+    <p class="emphasis">
+        They really have thought of everything.
+    </p>
+
+
+    <p>
+        Next week learning all about the theory of being the lift operator, I was all ready to get some bows and arigato gozaimashita.
+    </p>
+
+
+    <p>
+        Yeah, it is slightly difficult to get some attention from them otherwise.
+    </p>
+
+
+    <p class="final">
+        These days my biggest challenge is finding a lift where I'm still the youngest by the panel — I clearly showed up in this country a few years too late. Now I get to "operate" maybe once a week, like a benched player brought in for a nostalgia run.
+    </p>
+
 
 </main>
-
 
 
 <!-- =======================================================
      FOOTER
 ======================================================= -->
 
-<footer class="footer">
+<footer>
 
-  <div class="footer-inner">
-
-    <span>
-      © <span id="year"></span> Vishnu Chandran
-    </span>
-
-    <span>
-      Field notes · Policy · Data · Life
-    </span>
-
-    <span>
-      <a href="index.html">
-        Back to home ↑
-      </a>
-    </span>
-
-  </div>
+    Vishnu Chandran
 
 </footer>
 
 
-
-<script>
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-</script>
-
-
 </body>
+
 </html>
