@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Bus Rides: A Subsidy for Women, A Bonus for Men</title>
+
+<!-- =========================================================
+     GOOGLE FONTS
+========================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+>
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: #F5FBFF;
+    color: #243B53;
+
+    font-family: "DM Sans", sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   TOP / BACK
+========================================================= */
+
+.top {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 30px 7vw 0;
+}
+
+.back {
+    color: #627D98;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 0.08em;
+
+    transition: all 0.25s ease;
+}
+
+.back:hover {
+    color: #3AA7E8;
+}
+
+
+/* =========================================================
+   ARTICLE HEADER
+========================================================= */
+
+.article-header {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 95px auto 90px;
+
+    padding: 0 7vw;
+}
+
+.label {
+    margin-bottom: 25px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 0.20em;
+
+    text-transform: uppercase;
+
+    color: #3AA7E8;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+h1 {
+    margin: 0;
+
+    max-width: 1300px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(4rem, 8vw, 8.5rem);
+
+    font-weight: 500;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+
+    color: #102A43;
+}
+
+
+/* =========================================================
+   ARTICLE CONTAINER
+========================================================= */
+
+.article {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto 130px;
+
+    padding: 0 7vw;
+}
+
+
+/* =========================================================
+   PHOTO
+========================================================= */
+
+.article-image {
+    float: right;
+
+    width: 46%;
+
+    margin: 0 0 40px 65px;
+
+    position: relative;
+}
+
+.article-image img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 18px 45px rgba(16, 42, 67, 0.10);
+
+    background: #E8F7FE;
+}
+
+
+/* =========================================================
+   IMAGE CAPTION
+========================================================= */
+
+.article-image::after {
+    content: "INDIA · RESEARCH NOTE";
+
+    display: block;
+
+    margin-top: 13px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.18em;
+
+    color: #7B9AB0;
+}
+
+
+/* =========================================================
+   ARTICLE TEXT
+========================================================= */
+
+.article p {
+    margin: 0 0 35px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    line-height: 1.9;
+
+    color: #243B53;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   OPENING
+========================================================= */
+
+.opening {
+    margin-bottom: 62px;
+}
+
+.opening p {
+    margin: 0 0 35px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #243B53;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+.disclaimer {
+
+    padding: 22px 25px;
+
+    margin: 35px 0 50px;
+
+    border-left: 3px solid #90D5FF;
+
+    background: rgba(144, 213, 255, 0.10);
+
+    color: #627D98 !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.75 !important;
+
+    text-align: left !important;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.article h2 {
+
+    clear: both;
+
+    margin: 75px 0 30px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 2.8rem;
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.035em;
+
+    color: #102A43;
+}
+
+
+/* =========================================================
+   BULLET LIST
+========================================================= */
+
+.findings {
+
+    margin: 20px 0 55px;
+
+    padding-left: 25px;
+
+    clear: both;
+}
+
+.findings li {
+
+    margin-bottom: 20px;
+
+    padding-left: 8px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #243B53;
+}
+
+.findings li::marker {
+
+    color: #3AA7E8;
+
+}
+
+
+/* =========================================================
+   TECHNICAL SECTION
+========================================================= */
+
+.technical-note {
+
+    font-size: 18px !important;
+
+    color: #243B53 !important;
+
+    text-align: left !important;
+
+    margin-bottom: 35px !important;
+}
+
+
+/* =========================================================
+   BOTTOMLINE
+========================================================= */
+
+.bottomline {
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================================================
+   EMPHASIS
+========================================================= */
+
+.emphasis {
+
+    color: #102A43 !important;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   FINAL PARAGRAPH
+========================================================= */
+
+.final {
+
+    margin-top: 60px !important;
+
+    color: #102A43 !important;
+
+    font-weight: 500;
+
+    font-size: 19px !important;
+}
+
+
+/* =========================================================
+   CLEAR FLOAT
+========================================================= */
+
+.article::after {
+
+    content: "";
+
+    display: table;
+
+    clear: both;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    width: 100%;
+
+    border-top: 1px solid #D5ECF8;
+
+    text-align: center;
+
+    padding: 35px 20px 45px;
+
+    background: #EDF8FD;
+
+    color: #78909C;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .top {
+        padding: 25px 5vw 0;
+    }
+
+
+    .article-header {
+        padding: 0 5vw;
+
+        margin: 75px auto 65px;
+    }
+
+
+    .article {
+        padding: 0 5vw;
+
+        margin-bottom: 100px;
+    }
+
+
+    h1 {
+        font-size: clamp(3.5rem, 10vw, 6.5rem);
+
+        line-height: 1;
+    }
+
+
+    .article-image {
+
+        float: none;
+
+        width: 100%;
+
+        margin: 0 0 48px;
+    }
+
+
+    .article p,
+    .opening p {
+
+        font-size: 17px;
+
+        line-height: 1.85;
+    }
+
+
+    .article h2 {
+
+        font-size: 2.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .top {
+        padding: 22px 20px 0;
+    }
+
+
+    .article-header {
+
+        padding: 0 20px;
+
+        margin: 65px auto 50px;
+    }
+
+
+    .article {
+
+        padding: 0 20px;
+
+        margin-bottom: 75px;
+    }
+
+
+    .label {
+
+        font-size: 10px;
+
+        letter-spacing: 0.16em;
+
+        margin-bottom: 20px;
+    }
+
+
+    h1 {
+
+        font-size: 3.25rem;
+
+        line-height: 1.02;
+
+        letter-spacing: -0.045em;
+    }
+
+
+    .article-image {
+
+        width: 100%;
+
+        margin: 0 0 38px;
+    }
+
+
+    .article p,
+    .opening p {
+
+        font-size: 16.5px;
+
+        line-height: 1.85;
+
+        text-align: left;
+    }
+
+
+    .opening {
+        margin-bottom: 48px;
+    }
+
+
+    .disclaimer {
+
+        padding: 18px 18px;
+
+        font-size: 14px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    .article h2 {
+
+        font-size: 2.2rem;
+
+        margin-top: 55px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .findings {
+
+        padding-left: 20px;
+    }
+
+
+    .findings li {
+
+        font-size: 16px;
+
+        line-height: 1.75;
+    }
+
+
+    .final {
+
+        margin-top: 45px !important;
+
+        font-size: 17px !important;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     BACK
+======================================================= -->
+
+<div class="top">
+
+    <a href="index.html" class="back">
+        ← Back
+    </a>
+
+</div>
+
+
+<!-- =======================================================
+     ARTICLE HEADER
+======================================================= -->
+
+<header class="article-header">
+
+    <div class="label">
+        RESEARCH NOTE · ECONOMICS · INDIA
+    </div>
+
+    <h1>
+        Free Bus Rides: A Subsidy for Women, A Bonus for Men
+    </h1>
+
+</header>
+
+
+<!-- =======================================================
+     ARTICLE
+======================================================= -->
+
+<main class="article">
+
+
+    <!-- ===================================================
+         PHOTO
+
+         Save the pencil sketch in the SAME folder as this
+         HTML file using this filename:
+
+         free-bus-rides.jpeg
+    ==================================================== -->
+
+    <div class="article-image">
+
+        <img
+            src="./free-bus-rides.jpeg"
+            alt="Woman getting into a bus"
+            loading="eager"
+        >
+
+    </div>
+
+
+    <!-- ===================================================
+         OPENING
+    ==================================================== -->
+
+    <div class="opening">
+
+        <p>
+            I came across a beautifully written paper while researching for my econometric coursework and honestly, it should not be left on NBER — "Gender-Specific Transportation Costs and Female Time Use: Evidence from India's Pink Slip Program" by Chen, Coşar, Ghose, Mahendru, and Sekhri (2024) — studying the free bus schemes for women in Punjab and Tamil Nadu.
+        </p>
+
+
+        <p class="disclaimer">
+
+            Disclaimer : I did not verify the data and re-run their regressions . The paper also hasn’t been peer-reviewed yet, so this is kind of a review of a review that hasn’t happened.
+
+        </p>
+
+    </div>
+
+
+    <!-- ===================================================
+         STRIKING PART
+    ==================================================== -->
+
+    <h2>
+        Striking part
+    </h2>
+
+
+    <p>
+
+        Like anybody else, I also thought that on average, free bus travel means getting more women working. Economics is rarely that polite. The study had other statistically significant findings than this this direct consequence :
+
+    </p>
+
+
+    <ul class="findings">
+
+        <li>
+            Married women with low or medium education actually worked less after this scheme. Turned out that they started using the free service for more markets, groceries and pickups. They worked it out for more housework commutation than for the job.
+        </li>
+
+
+        <li>
+            Husbands quietly reduced their own share of household chores and worked more hours themselves. The free bus effectively let wife to travel far for better bargains and cheaper products. This has reduced spendings on stationeries and other house items.
+        </li>
+
+
+        <li>
+            Already employed and unmarried now work more — This is the highlight. (About +26min/day more working). Might be a mode(of transportation)-substitution effect.
+        </li>
+
+
+        <li>
+            New bus riders travelling twice as far and more likely a long term signal that job access may be improving.
+        </li>
+
+    </ul>
+
+
+    <!-- ===================================================
+         ECONOMICS
+    ==================================================== -->
+
+    <h2>
+        Now some Economics ( Skip if you dislike technicalities)
+    </h2>
+
+
+    <p>
+
+        Main dataset is the household survey covering roughly 1,60,000 household across India for three years. Treatment states are Punjab and Tamil Nadu; while the control group is the other 20 Indian states and union territories. The key outcome variables are : household spendings on transportation, individual time spent on travelling etc. The control variables include individual and household effects, education effects, state specific variables.
+
+    </p>
+
+
+    <p>
+
+        They have used synthetic difference-in-difference method. Yeah, it is one of the well-regarded, modern causal-inference method, and they back it up with five separate robustness checks also. Technically I would rate it as a very solid work. Data set sanctity might be questionable, as it will take some years together to confirm the findings as the scheme is launched recently.
+
+    </p>
+
+
+    <!-- ===================================================
+         BOTTOMLINE
+    ==================================================== -->
+
+    <h2>
+        Bottomline
+    </h2>
+
+
+    <div class="bottomline">
+
+        <p>
+
+            The paper’s own numbers suggest the effect is quieter and slower than advertised. The money saved, about 1000-1500 INR isn’t savings but spend on something else as claimed by the paper. With only two treated states, a pandemic which muddled the equations, the best evidence of long-run gains need to wait.
+
+        </p>
+
+    </div>
+
+
+    <!-- ===================================================
+         FINAL LINE
+    ==================================================== -->
+
+    <p class="final">
+
+        As it says, there’s no such thing as a free lunch.
+
+    </p>
+
+
+</main>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+    Vishnu Chandran
+
+</footer>
+
+
+</body>
+
+</html>
